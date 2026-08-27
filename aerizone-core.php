@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 3.2.0
+ * Version: 3.3.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '3.2.0');
+define('AERIZONE_CORE_VERSION', '3.3.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -37,16 +37,16 @@ function aerizone_logo() {
 }
 
 function aerizone_header($active) {
-    $links = array('home' => array('/', 'Home'), 'about' => array('/about-us/', 'About'), 'services' => array('/services/', 'Services'), 'contact' => array('/contact-us/', 'Contact'));
+    $links = array('home' => array('/', 'Home'), 'about' => array('/about-us/', 'About'), 'services' => array('/services/', 'Solutions'), 'contact' => array('/contact-us/', 'Contact'));
     $nav = '';
     foreach ($links as $key => $item) {
-        $nav .= '<a ' . ($active === $key ? 'class="is-active" ' : '') . 'href="' . esc_url(home_url($item[0])) . '">' . esc_html($item[1]) . '</a>';
+        $nav .= '<a ' . ($active === $key ? 'class="is-active" ' : '') . 'href="' . esc_url(home_url($item[0])) . '"><span>' . esc_html($item[1]) . '</span></a>';
     }
-    return '<header class="az-header"><div class="az-wrap">' . aerizone_logo() . '<button class="az-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button><nav class="az-nav">' . $nav . '</nav><a class="az-call" href="tel:+919011512832"><span>Talk to an expert</span><b>+91 90115 12832</b></a></div></header>';
+    return '<header class="az-header"><div class="az-wrap"><div class="az-header-brand">' . aerizone_logo() . '<span class="az-header-status"><i></i> SYSTEMS ONLINE</span></div><button class="az-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button><nav class="az-nav">' . $nav . '</nav><div class="az-header-action"><a class="az-call" href="tel:+919011512832"><span>Talk to an expert</span><b>+91 90115 12832</b></a><a class="az-header-cta" href="' . esc_url(home_url('/contact-us/')) . '">Plan a project <i>↗</i></a></div></div></header>';
 }
 
 function aerizone_footer() {
-    return '<footer class="az-footer"><div class="az-wrap az-footer-grid"><div>' . aerizone_logo() . '<p>Thoughtful automation, immersive entertainment and dependable security—designed as one connected experience.</p></div><div><h3>Explore</h3><a href="' . esc_url(home_url('/about-us/')) . '">About Aerizone</a><a href="' . esc_url(home_url('/services/')) . '">Solutions</a><a href="' . esc_url(home_url('/contact-us/')) . '">Contact</a></div><div><h3>Connect</h3><a href="tel:+919011512832">+91 90115 12832</a><a href="mailto:aerzoneadm@gmail.com">aerzoneadm@gmail.com</a><span>Nashik, Maharashtra</span></div></div><div class="az-wrap az-copyright"><span>© ' . esc_html(date('Y')) . ' Aerizone Automation &amp; Security Systems</span><span>Comfort. Control. Confidence.</span></div></footer>';
+    return '<footer class="az-footer"><div class="az-footer-glow"></div><div class="az-wrap"><div class="az-footer-lead"><div><p class="az-kicker"><span></span> AERIZONE AUTOMATION &amp; SECURITY</p><h2>Technology should feel<br><em>quietly extraordinary.</em></h2></div><a href="' . esc_url(home_url('/contact-us/')) . '">Start a conversation <span>↗</span></a></div><div class="az-footer-grid"><div class="az-footer-brand">' . aerizone_logo() . '<p>Thoughtful automation, immersive entertainment and dependable security—designed as one connected experience.</p><div class="az-footer-social"><a href="https://www.instagram.com/aerizoneautomationsecurity/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/aerizoneautomationsecurity/" target="_blank" rel="noopener">Facebook ↗</a></div></div><div><h3>Explore</h3><a href="' . esc_url(home_url('/')) . '">Home</a><a href="' . esc_url(home_url('/about-us/')) . '">About Aerizone</a><a href="' . esc_url(home_url('/services/')) . '">All solutions</a><a href="' . esc_url(home_url('/contact-us/')) . '">Contact</a></div><div><h3>Solutions</h3><span>Home automation</span><span>Home theatre &amp; AV</span><span>CCTV &amp; intercom</span><span>Curtains &amp; gate automation</span></div><div class="az-footer-connect"><h3>Connect</h3><a href="tel:+919011512832">+91 90115 12832</a><a href="mailto:aerzoneadm@gmail.com">aerzoneadm@gmail.com</a><span>Nashik, Maharashtra</span><b><i></i> Consultations available</b></div></div><div class="az-copyright"><span>© ' . esc_html(date('Y')) . ' Aerizone Automation &amp; Security Systems</span><span>Comfort · Control · Confidence</span><a href="#aerizone-app">Back to top ↑</a></div></div></footer>';
 }
 
 function aerizone_dashboard() {

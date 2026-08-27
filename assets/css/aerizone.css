@@ -35,3 +35,15 @@
 #aerizone-app .az-auto-copy>p:not(.az-kicker){color:#e2edef!important;text-shadow:0 2px 18px rgba(0,0,0,.65)}
 #aerizone-app .az-auto-copy .az-auto-play{color:#ffffff!important}
 @media(max-width:560px){#aerizone-app .az-auto-shade{background:linear-gradient(90deg,rgba(3,18,22,.97),rgba(3,18,22,.78))!important}}
+
+
+/* Aerizone 3.1.2 — image-card contrast correction */
+#aerizone-app .az-sol-card:after{background:linear-gradient(180deg,rgba(3,18,22,.02) 28%,rgba(3,18,22,.55) 66%,rgba(3,18,22,.97) 100%)!important}
+#aerizone-app .az-sol-card h3,
+#aerizone-app .az-sol-card h3 *,
+#aerizone-app .az-photo h3,
+#aerizone-app .az-photo h3 *{color:#ffffff!important;text-shadow:0 2px 18px rgba(0,0,0,.85)!important}
+#aerizone-app .az-sol-card small,
+#aerizone-app .az-sol-card>span,
+#aerizone-app .az-photo small{color:#a9f1f5!important;text-shadow:0 2px 12px rgba(0,0,0,.9)!important}
+#aerizone-app .az-sol-card>div{z-index:3}

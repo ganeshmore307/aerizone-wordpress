@@ -21,7 +21,7 @@ jobs:
       - name: Install FTP client
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
-      - name: Test secure FTP connection
+      - name: Validate secret variables
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -29,21 +29,37 @@ jobs:
           FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_PATH: ${{ secrets.FTP_PATH }}
         run: |
-          test -n "$FTP_HOST"
-          test -n "$FTP_USERNAME"
-          test -n "$FTP_PASSWORD"
-          test -n "$FTP_PORT"
-          test -n "$FTP_PATH"
+          test -n "$FTP_HOST" || { echo "FTP_HOST is missing"; exit 1; }
+          test -n "$FTP_USERNAME" || { echo "FTP_USERNAME is missing"; exit 1; }
+          test -n "$FTP_PASSWORD" || { echo "FTP_PASSWORD is missing"; exit 1; }
+          test -n "$FTP_PORT" || { echo "FTP_PORT is missing"; exit 1; }
+          test -n "$FTP_PATH" || { echo "FTP_PATH is missing"; exit 1; }
 
-          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" -p "$FTP_PORT" "$FTP_HOST" <<EOF
+      - name: Test Hostinger FTP access
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_PATH: ${{ secrets.FTP_PATH }}
+        run: |
+          CLEAN_HOST="${FTP_HOST#ftp://}"
+          CLEAN_HOST="${CLEAN_HOST#ftps://}"
+          CLEAN_HOST="${CLEAN_HOST%/}"
+          CLEAN_PATH="${FTP_PATH#/}"
+          CLEAN_PATH="${CLEAN_PATH%/}"
+
+          lftp "ftp://$CLEAN_HOST:$FTP_PORT" -u "$FTP_USERNAME","$FTP_PASSWORD" <<EOF
           set cmd:fail-exit yes
-          set net:timeout 20
+          set net:timeout 25
           set net:max-retries 1
-          set ftp:ssl-force true
+          set ftp:passive-mode true
+          set ftp:ssl-allow true
           set ftp:ssl-protect-data true
-          cd "$FTP_PATH"
+          set ssl:verify-certificate true
+          cd "$CLEAN_PATH"
           pwd
           bye
           EOF
 
-          echo "FTP connection successful and target directory is accessible."
+          echo "FTP connection successful and public_html is accessible."

@@ -68,7 +68,7 @@ jobs:
           set ftp:ssl-protect-data true
           set ssl:verify-certificate false
           mkdir -p "$REMOTE_DIR"
-          mirror --reverse --delete --verbose \
+          mirror --reverse --only-newer --verbose \
             --exclude-glob ".git*" \
             --exclude-glob ".github/**" \
             --exclude "README.md" \

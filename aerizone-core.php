@@ -3,7 +3,7 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Brand styles, front-end enhancements, and Elementor support for the Aerizone website.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('AERIZONE_CORE_VERSION', '1.0.0');
+define('AERIZONE_CORE_VERSION', '1.0.1');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 function aerizone_core_enqueue_assets() {

@@ -1,0 +1,79 @@
+name: Deploy Aerizone Core via FTP
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+      - ".gitignore"
+      - ".github/workflows/test-ftp-connection.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aerizone-production-ftp
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Sync plugin to aerizone.in
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install FTP client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Validate deployment secrets
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_PATH: ${{ secrets.FTP_PATH }}
+        run: |
+          test -n "$FTP_HOST" || { echo "FTP_HOST is missing"; exit 1; }
+          test -n "$FTP_USERNAME" || { echo "FTP_USERNAME is missing"; exit 1; }
+          test -n "$FTP_PASSWORD" || { echo "FTP_PASSWORD is missing"; exit 1; }
+          test -n "$FTP_PORT" || { echo "FTP_PORT is missing"; exit 1; }
+          test -n "$FTP_PATH" || { echo "FTP_PATH is missing"; exit 1; }
+
+      - name: Deploy plugin files
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_PATH: ${{ secrets.FTP_PATH }}
+        run: |
+          CLEAN_HOST="${FTP_HOST#ftp://}"
+          CLEAN_HOST="${CLEAN_HOST#ftps://}"
+          CLEAN_HOST="${CLEAN_HOST%/}"
+          CLEAN_PATH="${FTP_PATH#/}"
+          CLEAN_PATH="${CLEAN_PATH%/}"
+          REMOTE_DIR="$CLEAN_PATH/wp-content/plugins/aerizone-core"
+
+          lftp "ftp://$CLEAN_HOST:$FTP_PORT" -u "$FTP_USERNAME","$FTP_PASSWORD" <<EOF
+          set cmd:fail-exit yes
+          set net:timeout 30
+          set net:max-retries 2
+          set ftp:passive-mode true
+          set ftp:ssl-allow true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate true
+          mkdir -p "$REMOTE_DIR"
+          mirror --reverse --delete --verbose \
+            --exclude-glob ".git*" \
+            --exclude-glob ".github/**" \
+            --exclude "README.md" \
+            ./ "$REMOTE_DIR"
+          bye
+          EOF
+
+          echo "Aerizone Core deployed to wp-content/plugins/aerizone-core."

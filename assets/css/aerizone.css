@@ -1,0 +1,72 @@
+:root {
+    --aerizone-teal: #0797a8;
+    --aerizone-teal-dark: #057583;
+    --aerizone-charcoal: #17252b;
+    --aerizone-grey: #7a8589;
+    --aerizone-surface: #f4f8f8;
+    --aerizone-white: #ffffff;
+    --aerizone-orange: #f58218;
+    --aerizone-radius: 18px;
+    --aerizone-shadow: 0 18px 50px rgba(23, 37, 43, 0.12);
+}
+
+.aerizone-site {
+    color: var(--aerizone-charcoal);
+    background-color: var(--aerizone-white);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.aerizone-site :is(a, button, input, textarea, select):focus-visible {
+    outline: 3px solid rgba(7, 151, 168, 0.35);
+    outline-offset: 3px;
+}
+
+.aerizone-site .aerizone-accent {
+    color: var(--aerizone-teal);
+}
+
+.aerizone-site .aerizone-surface {
+    background: var(--aerizone-surface);
+}
+
+.aerizone-site .aerizone-card {
+    border: 1px solid rgba(7, 151, 168, 0.14);
+    border-radius: var(--aerizone-radius);
+    background: var(--aerizone-white);
+    box-shadow: var(--aerizone-shadow);
+}
+
+.aerizone-site .aerizone-button,
+.aerizone-site .elementor-button.aerizone-button {
+    border-radius: 999px;
+    background: var(--aerizone-teal);
+    color: var(--aerizone-white);
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.aerizone-site .aerizone-button:hover,
+.aerizone-site .elementor-button.aerizone-button:hover {
+    transform: translateY(-2px);
+    background: var(--aerizone-teal-dark);
+    box-shadow: 0 12px 28px rgba(7, 151, 168, 0.24);
+}
+
+.aerizone-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 650ms ease, transform 650ms ease;
+}
+
+.aerizone-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aerizone-reveal,
+    .aerizone-site .aerizone-button {
+        transition: none;
+        transform: none;
+    }
+}

@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 3.3.1
+ * Version: 3.4.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '3.3.1');
+define('AERIZONE_CORE_VERSION', '3.4.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -58,7 +58,7 @@ function aerizone_home() {
     <section class="az-auto-hero">
       <div class="az-auto-shade"></div><div class="az-auto-grid"></div>
       <div class="az-wrap az-auto-hero-inner">
-        <div class="az-auto-copy aerizone-reveal"><p class="az-kicker"><span></span> AERIZONE · AUTOMATION &amp; SECURITY</p><h1>One touch.<br><em>Every room responds.</em></h1><p>Lighting, curtains, cinema, gates and security—connected into one effortless experience.</p><div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Experience Aerizone <span>↗</span></a><a class="az-auto-play" href="#az-scenes"><i>▶</i> See a smart scene</a></div></div>
+        <div class="az-auto-copy aerizone-reveal"><p class="az-kicker"><span></span> INTELLIGENT SPACES · DESIGNED AROUND YOU</p><h1>Your space,<br><em>instinctively yours.</em></h1><p>Aerizone brings lighting, curtains, entertainment, access and security into one beautifully simple experience.</p><div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Design my experience <span>↗</span></a><a class="az-auto-play" href="#az-scenes"><i>▶</i> Watch the home respond</a></div><div class="az-hero-proof"><span><b>01</b> One connected ecosystem</span><span><b>02</b> Designed, installed &amp; supported</span><span><b>03</b> Built around your lifestyle</span></div></div>
         <div class="az-live-panel aerizone-reveal"><div class="az-live-head"><span><i></i> HOME ONLINE</span><b>ALL SYSTEMS NORMAL</b></div><div class="az-live-room"><small>LIVING ROOM</small><strong>Evening scene</strong><span>24°</span></div><div class="az-live-devices"><button class="is-active"><i>◉</i><span>Lights</span><b>68%</b></button><button class="is-active"><i>◒</i><span>Curtains</span><b>CLOSED</b></button><button><i>▷</i><span>Cinema</span><b>READY</b></button><button class="is-active"><i>⌂</i><span>Security</span><b>ARMED</b></button></div><div class="az-live-footer"><span>ACTIVE SCENE</span><b>Welcome home</b><i>→</i></div></div>
       </div>
       <div class="az-auto-status"><div class="az-wrap"><span><i class="is-green"></i> Main gate locked</span><span><i></i> 8 lights active</span><span><i></i> Curtains 68%</span><span><i class="is-green"></i> Security armed</span></div></div>

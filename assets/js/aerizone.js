@@ -24,4 +24,14 @@
     const text = `Hello Aerizone, I would like to discuss a project.\n\nName: ${data.get('name')}\nPhone: ${data.get('phone')}\nInterest: ${data.get('interest')}\nSpace/Requirement: ${data.get('message') || 'Not specified'}`;
     window.open(`https://wa.me/919011512832?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
+  const sceneStage = app.querySelector('.az-scene-stage');
+  const sceneButtons = app.querySelectorAll('.az-scene-tabs [data-scene]');
+  const scenePanes = app.querySelectorAll('.az-scene-pane[data-pane]');
+  sceneButtons.forEach(button => button.addEventListener('click', () => {
+    const scene = button.dataset.scene;
+    sceneButtons.forEach(item => item.classList.toggle('is-active', item === button));
+    scenePanes.forEach(pane => pane.classList.toggle('is-active', pane.dataset.pane === scene));
+    if (sceneStage) sceneStage.className = 'az-scene-stage is-' + scene;
+  }));
+
 })();

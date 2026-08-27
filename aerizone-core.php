@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 3.1.2
+ * Version: 3.2.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '3.1.2');
+define('AERIZONE_CORE_VERSION', '3.2.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -71,7 +71,7 @@ function aerizone_home() {
       <article class="az-scene-pane" data-pane="cinema"><div><small>21:00 · CINEMA</small><h3>One command. The room disappears.</h3><p>Lights dim, curtains close and the AV system starts together—leaving only the film, the sound and the moment.</p></div><ul><li><span>LIGHTING</span><b>DIM · 8%</b></li><li><span>CURTAINS</span><b>CLOSED</b></li><li><span>THEATRE</span><b>PLAYING</b></li></ul></article>
     </div></div></section>
     <section class="az-home-solutions"><div class="az-wrap"><div class="az-section-heading"><div><p class="az-kicker az-dark"><span></span> THE AERIZONE ECOSYSTEM</p><h2>Everything important.<br>Connected beautifully.</h2></div><a class="az-text-link" href="' . esc_url(home_url('/services/')) . '">Explore all solutions <span>→</span></a></div><div class="az-solution-mosaic"><a class="az-sol-card az-img-curtains" href="' . esc_url(home_url('/services/')) . '"><span>01</span><div><small>COMFORT</small><h3>Automation, lighting &amp; curtains</h3></div></a><a class="az-sol-card az-img-theatre" href="' . esc_url(home_url('/services/')) . '"><span>02</span><div><small>EXPERIENCE</small><h3>Home theatre &amp; AV</h3></div></a><a class="az-sol-card az-img-cctv" href="' . esc_url(home_url('/services/')) . '"><span>03</span><div><small>CONFIDENCE</small><h3>CCTV, intercom &amp; access</h3></div></a><a class="az-sol-card az-img-home" href="' . esc_url(home_url('/services/')) . '"><span>04</span><div><small>RELIABILITY</small><h3>Residential networking</h3></div></a></div></div></section>
-    <section class="az-one-system"><div class="az-wrap"><div><p class="az-kicker"><span></span> ONE TEAM · ONE SYSTEM</p><h2>Designed together.<br>Controlled together.</h2></div><div class="az-one-flow"><span>LISTEN</span><i>→</i><span>DESIGN</span><i>→</i><span>INTEGRATE</span><i>→</i><span>SUPPORT</span></div></div></section>
+    <section class="az-one-system"><div class="az-wrap"><div class="az-system-intro"><p class="az-kicker"><span></span> THE AERIZONE METHOD</p><h2>One vision.<br><em>One accountable team.</em></h2><p>From the first conversation to everyday use, every device is planned as part of one calm, dependable experience.</p><a href="' . esc_url(home_url('/about-us/')) . '">How we work <span>↗</span></a></div><div class="az-system-path"><article><b>01</b><div><small>DISCOVER</small><h3>We listen to how you live.</h3><p>Your routines, rooms, priorities and future plans shape the brief.</p></div></article><article><b>02</b><div><small>DESIGN</small><h3>Every detail is planned together.</h3><p>Lighting, security, entertainment and control become one blueprint.</p></div></article><article><b>03</b><div><small>INTEGRATE</small><h3>Technology disappears into the space.</h3><p>We install, program and test the complete connected experience.</p></div></article><article><b>04</b><div><small>SUPPORT</small><h3>Confidence continues after handover.</h3><p>Clear guidance and dependable support keep everything effortless.</p></div></article></div></div></section>
     ' . aerizone_cta() . '</main>';
 }
 
@@ -128,7 +128,7 @@ function aerizone_visual_band($context = 'home') {
 }
 
 function aerizone_cta() {
-    return '<section class="az-cta"><div class="az-wrap"><div><p class="az-kicker"><span></span> READY WHEN YOU ARE</p><h2>Make your next space<br><em>intelligently yours.</em></h2></div><a class="az-btn az-btn-white" href="' . esc_url(home_url('/contact-us/')) . '">Book a consultation <span>↗</span></a></div></section>';
+    return '<section class="az-cta"><div class="az-cta-visual"><div class="az-cta-status"><i></i><span>AERIZONE SYSTEMS</span><b>DESIGNED AROUND YOU</b></div></div><div class="az-cta-content"><p class="az-kicker"><span></span> START WITH A CONVERSATION</p><h2>Your space.<br><em>Thoughtfully connected.</em></h2><p>Tell us what you are building or upgrading. We will help you shape one integrated plan for comfort, entertainment and security.</p><div class="az-cta-actions"><a class="az-btn az-btn-white" href="' . esc_url(home_url('/contact-us/')) . '">Plan my project <span>↗</span></a><a class="az-cta-call" href="tel:+919011512832"><small>TALK TO AN EXPERT</small><strong>+91 90115 12832</strong></a></div><div class="az-cta-notes"><span>Residential &amp; commercial</span><span>Nashik, Maharashtra</span><span>End-to-end integration</span></div></div></section>';
 }
 
 add_filter('the_content', function ($content) {

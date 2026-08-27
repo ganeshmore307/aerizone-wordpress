@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 3.0.0
+ * Version: 3.1.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '3.0.0');
+define('AERIZONE_CORE_VERSION', '3.1.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -54,26 +54,25 @@ function aerizone_dashboard() {
 }
 
 function aerizone_home() {
-    return '<main class="az-main">
-    <section class="az-hero az-brand-hero"><div class="az-orbit az-orbit-a"></div><div class="az-orbit az-orbit-b"></div><div class="az-wrap az-hero-grid">
-      <div class="az-hero-copy aerizone-reveal"><p class="az-kicker"><span></span> AERIZONE AUTOMATION &amp; SECURITY SYSTEMS</p><h1>A home should not wait for instructions.<br><em>It should understand your rhythm.</em></h1><p class="az-lead">Aerizone unites comfort, entertainment, security and connectivity into one thoughtfully designed experience—so your space responds naturally from morning to night.</p><div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Design my experience <span>↗</span></a><a class="az-text-link" href="' . esc_url(home_url('/services/')) . '">See the complete ecosystem <span>→</span></a></div><div class="az-brand-proof"><span>DESIGN</span><i></i><span>INTEGRATION</span><i></i><span>PROGRAMMING</span><i></i><span>SUPPORT</span></div></div>
-      <div class="az-hero-visual aerizone-reveal">' . aerizone_dashboard() . '<div class="az-signal s1"><i></i><span>Home secured</span></div><div class="az-signal s2"><i></i><span>Evening scene active</span></div></div>
-    </div></section>' . aerizone_solution_strip() . '
-    <section class="az-brand-thesis"><div class="az-wrap"><div class="az-thesis-label"><span>WHAT AERIZONE CREATES</span></div><div class="az-thesis-copy aerizone-reveal"><h2>Not more devices.<br><em>One better way to live.</em></h2><p>Aerizone is an automation and security integration company. We bring lighting, curtains, entertainment, surveillance, access and networking together—then make the entire system simple enough for everyone at home to use.</p></div></div></section>
-    <section class="az-ecosystem"><div class="az-wrap"><div class="az-section-heading"><div><p class="az-kicker az-dark"><span></span> ONE ECOSYSTEM, FOUR OUTCOMES</p><h2>Every system has a purpose.</h2></div><p>Technology earns its place only when it makes the space calmer, safer or more enjoyable.</p></div><div class="az-ecosystem-grid">
-      <article><span class="az-eco-word">COMFORT</span><h3>The space adjusts around you.</h3><p>Lights, curtains and daily scenes respond with one tap, a schedule or a sensor.</p><b>Lighting · Curtains · Scenes</b></article>
-      <article><span class="az-eco-word">EXPERIENCE</span><h3>Entertainment feels truly immersive.</h3><p>Picture, sound, lighting and control work together for cinema without complexity.</p><b>Home theatre · AV · Acoustics</b></article>
-      <article><span class="az-eco-word">CONFIDENCE</span><h3>You stay aware and in control.</h3><p>See visitors, monitor important areas and manage entry whether you are home or away.</p><b>CCTV · Intercom · Gate access</b></article>
-      <article><span class="az-eco-word">RELIABILITY</span><h3>Everything stays connected.</h3><p>A planned residential network becomes the invisible foundation behind every smart feature.</p><b>Wi-Fi · Wired network · Coverage</b></article>
+    return '<main class="az-main az-new-home">
+    <section class="az-auto-hero">
+      <div class="az-auto-shade"></div><div class="az-auto-grid"></div>
+      <div class="az-wrap az-auto-hero-inner">
+        <div class="az-auto-copy aerizone-reveal"><p class="az-kicker"><span></span> AERIZONE · AUTOMATION &amp; SECURITY</p><h1>One touch.<br><em>Every room responds.</em></h1><p>Lighting, curtains, cinema, gates and security—connected into one effortless experience.</p><div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Experience Aerizone <span>↗</span></a><a class="az-auto-play" href="#az-scenes"><i>▶</i> See a smart scene</a></div></div>
+        <div class="az-live-panel aerizone-reveal"><div class="az-live-head"><span><i></i> HOME ONLINE</span><b>ALL SYSTEMS NORMAL</b></div><div class="az-live-room"><small>LIVING ROOM</small><strong>Evening scene</strong><span>24°</span></div><div class="az-live-devices"><button class="is-active"><i>◉</i><span>Lights</span><b>68%</b></button><button class="is-active"><i>◒</i><span>Curtains</span><b>CLOSED</b></button><button><i>▷</i><span>Cinema</span><b>READY</b></button><button class="is-active"><i>⌂</i><span>Security</span><b>ARMED</b></button></div><div class="az-live-footer"><span>ACTIVE SCENE</span><b>Welcome home</b><i>→</i></div></div>
+      </div>
+      <div class="az-auto-status"><div class="az-wrap"><span><i class="is-green"></i> Main gate locked</span><span><i></i> 8 lights active</span><span><i></i> Curtains 68%</span><span><i class="is-green"></i> Security armed</span></div></div>
+    </section>
+    <section class="az-feel"><div class="az-wrap"><div class="az-feel-title"><p class="az-kicker az-dark"><span></span> SMARTER IS NOT MORE COMPLICATED</p><h2>Your home.<br><em>Moving with you.</em></h2></div><div class="az-feel-orbit"><div class="az-orbit-core"><span>AERIZONE</span></div><span>LIGHTING</span><span>CURTAINS</span><span>SECURITY</span><span>ENTERTAINMENT</span><span>ACCESS</span><span>NETWORK</span></div></div></section>
+    <section class="az-scene-lab" id="az-scenes"><div class="az-wrap"><div class="az-scene-top"><div><p class="az-kicker"><span></span> EXPERIENCE A SMART SCENE</p><h2>Tap a moment.<br>Watch the home transform.</h2></div><div class="az-scene-tabs" role="tablist"><button class="is-active" data-scene="morning">Morning</button><button data-scene="away">Away</button><button data-scene="welcome">Welcome</button><button data-scene="cinema">Cinema</button></div></div><div class="az-scene-stage is-morning">
+      <article class="az-scene-pane is-active" data-pane="morning"><div><small>06:30 · MORNING</small><h3>A gentle start, automatically.</h3><p>Curtains open gradually. Selected lights warm up. The home moves into day mode without a round of switches.</p></div><ul><li><span>CURTAINS</span><b>OPENING 70%</b></li><li><span>LIGHTING</span><b>WARM · 45%</b></li><li><span>SECURITY</span><b>HOME MODE</b></li></ul></article>
+      <article class="az-scene-pane" data-pane="away"><div><small>09:15 · AWAY</small><h3>Leave once. The home handles the rest.</h3><p>Unneeded lights turn off, curtains move to privacy position and security confirms the property is protected.</p></div><ul><li><span>LIGHTING</span><b>ALL OFF</b></li><li><span>GATE</span><b>LOCKED</b></li><li><span>SECURITY</span><b>ARMED</b></li></ul></article>
+      <article class="az-scene-pane" data-pane="welcome"><div><small>19:30 · WELCOME</small><h3>The right atmosphere is waiting.</h3><p>The entrance responds, living areas illuminate and curtains shift into the evening position before you settle in.</p></div><ul><li><span>ENTRY</span><b>ACTIVE</b></li><li><span>LIGHTING</span><b>EVENING · 60%</b></li><li><span>CURTAINS</span><b>CLOSED</b></li></ul></article>
+      <article class="az-scene-pane" data-pane="cinema"><div><small>21:00 · CINEMA</small><h3>One command. The room disappears.</h3><p>Lights dim, curtains close and the AV system starts together—leaving only the film, the sound and the moment.</p></div><ul><li><span>LIGHTING</span><b>DIM · 8%</b></li><li><span>CURTAINS</span><b>CLOSED</b></li><li><span>THEATRE</span><b>PLAYING</b></li></ul></article>
     </div></div></section>
-    ' . aerizone_visual_band('home') . '
-    <section class="az-day"><div class="az-wrap"><div class="az-day-intro"><p class="az-kicker"><span></span> A DAY WITH AERIZONE</p><h2>Four moments.<br>One home that responds.</h2><p>The value of automation is not in the app. It is in the small moments that happen effortlessly every day.</p></div><div class="az-day-sequence">
-      <article><time>06:30</time><div><small>GOOD MORNING</small><h3>Your day begins gently.</h3><p>Curtains open gradually, selected lights turn on and the home moves into morning mode.</p></div></article>
-      <article><time>09:15</time><div><small>AWAY</small><h3>The home protects itself.</h3><p>Lights switch off, gates confirm closure and security monitoring remains within reach.</p></div></article>
-      <article><time>19:30</time><div><small>WELCOME HOME</small><h3>Comfort is ready before you ask.</h3><p>The entrance, living room lighting and curtains shift together into your evening scene.</p></div></article>
-      <article><time>22:00</time><div><small>MOVIE NIGHT</small><h3>The room becomes a cinema.</h3><p>Lights dim, curtains close and the AV system starts through one familiar command.</p></div></article>
-    </div></div></section>
-    <section class="az-process az-process-story"><div class="az-wrap"><div class="az-section-heading"><div><p class="az-kicker"><span></span> THE AERIZONE METHOD</p><h2>One accountable team,<br>from idea to everyday use.</h2></div><p>Integration works best when design, installation and programming are considered together.</p></div><div class="az-steps"><article><b>01</b><h3>Understand</h3><p>We study your routines, priorities, interiors and project stage.</p></article><article><b>02</b><h3>Design</h3><p>We plan the right systems, device locations, wiring and controls.</p></article><article><b>03</b><h3>Integrate</h3><p>We install, program, test and coordinate the complete experience.</p></article><article><b>04</b><h3>Support</h3><p>We explain the system clearly and remain available after handover.</p></article></div></div></section>' . aerizone_cta() . '</main>';
+    <section class="az-home-solutions"><div class="az-wrap"><div class="az-section-heading"><div><p class="az-kicker az-dark"><span></span> THE AERIZONE ECOSYSTEM</p><h2>Everything important.<br>Connected beautifully.</h2></div><a class="az-text-link" href="' . esc_url(home_url('/services/')) . '">Explore all solutions <span>→</span></a></div><div class="az-solution-mosaic"><a class="az-sol-card az-img-curtains" href="' . esc_url(home_url('/services/')) . '"><span>01</span><div><small>COMFORT</small><h3>Automation, lighting &amp; curtains</h3></div></a><a class="az-sol-card az-img-theatre" href="' . esc_url(home_url('/services/')) . '"><span>02</span><div><small>EXPERIENCE</small><h3>Home theatre &amp; AV</h3></div></a><a class="az-sol-card az-img-cctv" href="' . esc_url(home_url('/services/')) . '"><span>03</span><div><small>CONFIDENCE</small><h3>CCTV, intercom &amp; access</h3></div></a><a class="az-sol-card az-img-home" href="' . esc_url(home_url('/services/')) . '"><span>04</span><div><small>RELIABILITY</small><h3>Residential networking</h3></div></a></div></div></section>
+    <section class="az-one-system"><div class="az-wrap"><div><p class="az-kicker"><span></span> ONE TEAM · ONE SYSTEM</p><h2>Designed together.<br>Controlled together.</h2></div><div class="az-one-flow"><span>LISTEN</span><i>→</i><span>DESIGN</span><i>→</i><span>INTEGRATE</span><i>→</i><span>SUPPORT</span></div></div></section>
+    ' . aerizone_cta() . '</main>';
 }
 
 function aerizone_solution_strip() {

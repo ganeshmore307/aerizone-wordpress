@@ -2,6 +2,11 @@ name: Test FTP Connection
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/test-ftp-connection.yml"
 
 permissions:
   contents: read

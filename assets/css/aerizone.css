@@ -203,3 +203,10 @@
 #aerizone-app .az-footer-brand .az-brand{background:transparent!important;border-radius:0!important;padding:0!important;box-shadow:none!important}
 #aerizone-app .az-header-brand .az-brand img{filter:drop-shadow(0 4px 10px rgba(0,0,0,.28));object-fit:contain}
 #aerizone-app .az-footer-brand .az-brand img{filter:drop-shadow(0 4px 12px rgba(0,0,0,.38));object-fit:contain}
+
+
+/* Aerizone 3.4.4 — clean transparent logo sizing */
+#aerizone-app .az-header-brand .az-brand img{width:215px!important;height:78px!important;max-width:none!important;display:block;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.28))}
+#aerizone-app .az-footer-brand .az-brand img{width:235px!important;height:auto!important;max-width:100%!important;display:block;object-fit:contain;filter:drop-shadow(0 5px 14px rgba(0,0,0,.35))}
+@media(max-width:1050px){#aerizone-app .az-header-brand .az-brand img{width:190px!important;height:68px!important}}
+@media(max-width:760px){#aerizone-app .az-header-brand .az-brand img{width:155px!important;height:56px!important}}

@@ -11,6 +11,16 @@
 }
 
 .aerizone-site {
+    /* Smartia Elementor global tokens remapped to the Aerizone identity. */
+    --e-global-color-e13e757: var(--aerizone-teal);
+    --e-global-color-eb2d121: var(--aerizone-teal-dark);
+    --e-global-color-256dcc5: var(--aerizone-charcoal);
+    --e-global-color-a7393ed: var(--aerizone-surface);
+    --e-global-color-84d75e0: #58666b;
+    --e-global-color-60d1b28: #dfe8ea;
+    --e-global-color-8283e2c: var(--aerizone-white);
+    --e-global-color-de03327: #101c21;
+
     color: var(--aerizone-charcoal);
     background-color: var(--aerizone-white);
     text-rendering: optimizeLegibility;

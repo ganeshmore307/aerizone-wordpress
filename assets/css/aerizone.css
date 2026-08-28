@@ -1802,3 +1802,66 @@
  #aerizone-app .az-solutions-promise p{margin-top:12px;line-height:1.6}
  #aerizone-app .az-solutions-hero-v3 .az-solutions-signature span{font-size:6px}
 }
+
+
+/* Aerizone 4.6.3 — hero contrast and button state correction */
+#aerizone-app .az-solutions-hero-v3 .az-btn,
+#aerizone-app .az-solutions-hero-v3 .az-btn:link,
+#aerizone-app .az-solutions-hero-v3 .az-btn:visited{
+  background:#23a5b5!important;
+  border-color:#23a5b5!important;
+  color:#ffffff!important;
+  text-decoration:none!important;
+}
+#aerizone-app .az-solutions-hero-v3 .az-btn span{color:#ffffff!important}
+#aerizone-app .az-solutions-hero-v3 .az-btn:hover,
+#aerizone-app .az-solutions-hero-v3 .az-btn:focus-visible{
+  background:#8ee4eb!important;
+  border-color:#8ee4eb!important;
+  color:#062329!important;
+  transform:translateY(-2px);
+}
+#aerizone-app .az-solutions-hero-v3 .az-btn:hover span,
+#aerizone-app .az-solutions-hero-v3 .az-btn:focus-visible span{color:#062329!important}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact,
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact:link,
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact:visited{
+  background:rgba(5,31,37,.76)!important;
+  border-color:rgba(182,228,232,.62)!important;
+  color:#ffffff!important;
+  text-decoration:none!important;
+}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact span{color:#8ee4eb!important}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact:hover,
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact:focus-visible{
+  background:#ffffff!important;
+  border-color:#ffffff!important;
+  color:#062329!important;
+  transform:translateY(-2px);
+}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact:hover span,
+#aerizone-app .az-solutions-hero-v3 .az-solutions-contact:focus-visible span{color:#159cac!important}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-side-note{
+  width:250px!important;
+  margin-bottom:32px!important;
+  padding:24px 25px!important;
+  border:1px solid rgba(173,224,229,.5)!important;
+  background:rgba(5,30,36,.78)!important;
+  box-shadow:0 24px 60px rgba(0,0,0,.22)!important;
+  backdrop-filter:blur(14px)!important;
+}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-side-note span{
+  color:#8ee4eb!important;
+  font-size:9px!important;
+}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-side-note b{
+  margin:14px 0 22px!important;
+  color:#ffffff!important;
+  opacity:.72;
+}
+#aerizone-app .az-solutions-hero-v3 .az-solutions-side-note p{
+  color:#ffffff!important;
+  font-size:14px!important;
+  line-height:1.65!important;
+  text-shadow:0 1px 12px rgba(0,0,0,.35);
+}

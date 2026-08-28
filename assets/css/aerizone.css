@@ -1052,3 +1052,158 @@
   }
   #aerizone-app .az-system-path p{font-size:13px!important}
 }
+
+
+/* Aerizone 4.4.0 — complete homepage hierarchy, clarity and narrative polish */
+#aerizone-app .az-new-home h1,
+#aerizone-app .az-new-home h2,
+#aerizone-app .az-new-home h3{
+  text-wrap:balance;
+}
+#aerizone-app .az-new-home p{
+  text-wrap:pretty;
+}
+#aerizone-app .az-feel{
+  padding:112px 0!important;
+  background:linear-gradient(135deg,#f8fbfb 0%,#f2f7f7 100%)!important;
+}
+#aerizone-app .az-feel .az-wrap{
+  grid-template-columns:minmax(360px,.88fr) minmax(460px,1.12fr)!important;
+  gap:clamp(70px,8vw,130px)!important;
+}
+#aerizone-app .az-feel-title h2{
+  max-width:610px!important;
+  font-size:clamp(48px,4.8vw,68px)!important;
+  font-weight:500!important;
+  line-height:1.04!important;
+  letter-spacing:-.052em!important;
+}
+#aerizone-app .az-feel-copy{
+  max-width:520px!important;
+  margin:28px 0 0!important;
+  padding-left:22px!important;
+  border-left:2px solid #1ea0b0!important;
+  color:#5f7478!important;
+  font-size:16px!important;
+  line-height:1.75!important;
+}
+#aerizone-app .az-feel-orbit{
+  width:min(510px,42vw)!important;
+  height:min(510px,42vw)!important;
+  box-shadow:0 35px 80px rgba(17,59,65,.08)!important;
+}
+#aerizone-app .az-feel-orbit>span{
+  padding:11px 15px!important;
+  border-color:#b8ced1!important;
+  color:#17353a!important;
+  font-size:9px!important;
+  font-weight:600!important;
+  box-shadow:0 8px 22px rgba(17,59,65,.07)!important;
+}
+#aerizone-app .az-orbit-core{
+  box-shadow:0 22px 65px rgba(7,27,31,.24)!important;
+}
+#aerizone-app .az-scene-lab{padding:118px 0!important}
+#aerizone-app .az-scene-top h2{
+  max-width:720px!important;
+  font-weight:500!important;
+}
+#aerizone-app .az-scene-pane h3{
+  font-weight:500!important;
+  letter-spacing:-.04em!important;
+}
+#aerizone-app .az-home-solutions{padding:118px 0!important}
+#aerizone-app .az-home-solutions .az-section-heading{
+  align-items:flex-end!important;
+  margin-bottom:42px!important;
+}
+#aerizone-app .az-home-solutions .az-section-heading h2{
+  max-width:850px!important;
+  font-size:clamp(44px,4.6vw,66px)!important;
+  font-weight:500!important;
+  line-height:1.05!important;
+  letter-spacing:-.052em!important;
+}
+#aerizone-app .az-section-copy{
+  max-width:650px!important;
+  margin:22px 0 0!important;
+  color:#657b7f!important;
+  font-size:15px!important;
+  line-height:1.7!important;
+}
+#aerizone-app .az-solution-mosaic{
+  grid-template-columns:1.15fr .85fr!important;
+  grid-template-rows:repeat(3,210px)!important;
+  gap:14px!important;
+}
+#aerizone-app .az-sol-card:first-child{grid-row:1/4!important}
+#aerizone-app .az-sol-card:after{
+  background:linear-gradient(180deg,rgba(5,20,24,.04) 30%,rgba(5,20,24,.9) 100%)!important;
+}
+#aerizone-app .az-sol-card h3{
+  max-width:560px!important;
+  font-size:clamp(23px,1.8vw,29px)!important;
+  font-weight:500!important;
+  line-height:1.16!important;
+}
+#aerizone-app .az-sol-card.az-img-cctv{
+  background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=88')!important;
+  background-position:center!important;
+}
+#aerizone-app .az-new-home + .az-footer .az-footer-lead{
+  display:none!important;
+}
+#aerizone-app .az-new-home + .az-footer .az-footer-grid{
+  padding-top:78px!important;
+}
+@media(max-width:1100px){
+  #aerizone-app .az-feel .az-wrap{
+    grid-template-columns:1fr!important;
+    gap:65px!important;
+  }
+  #aerizone-app .az-feel-orbit{
+    width:min(510px,80vw)!important;
+    height:min(510px,80vw)!important;
+    margin:auto!important;
+  }
+}
+@media(max-width:700px){
+  #aerizone-app .az-feel{padding:78px 0!important}
+  #aerizone-app .az-feel-title h2{font-size:39px!important}
+  #aerizone-app .az-feel-copy{
+    margin-top:22px!important;
+    padding-left:16px!important;
+    font-size:14px!important;
+  }
+  #aerizone-app .az-feel-orbit{
+    width:min(330px,84vw)!important;
+    height:min(330px,84vw)!important;
+  }
+  #aerizone-app .az-feel-orbit:before{inset:45px!important}
+  #aerizone-app .az-feel-orbit:after{inset:92px!important}
+  #aerizone-app .az-orbit-core{inset:118px!important}
+  #aerizone-app .az-feel-orbit>span{padding:8px 9px!important;font-size:7px!important}
+  #aerizone-app .az-scene-lab,
+  #aerizone-app .az-home-solutions{padding:78px 0!important}
+  #aerizone-app .az-home-solutions .az-section-heading{
+    display:block!important;
+  }
+  #aerizone-app .az-home-solutions .az-section-heading h2{font-size:38px!important}
+  #aerizone-app .az-home-solutions .az-text-link{
+    display:inline-flex!important;
+    margin-top:25px!important;
+  }
+  #aerizone-app .az-solution-mosaic{
+    grid-template-columns:1fr!important;
+    grid-template-rows:none!important;
+    gap:12px!important;
+  }
+  #aerizone-app .az-sol-card,
+  #aerizone-app .az-sol-card:first-child{
+    grid-row:auto!important;
+    min-height:300px!important;
+  }
+  #aerizone-app .az-new-home + .az-footer .az-footer-grid{
+    padding-top:58px!important;
+  }
+}

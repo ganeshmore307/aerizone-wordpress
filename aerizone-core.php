@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.3.0
+ * Version: 4.3.1
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.3.0');
+define('AERIZONE_CORE_VERSION', '4.3.1');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -84,8 +84,6 @@ function aerizone_home() {
           <div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Design my experience <span>↗</span></a><a class="az-auto-play" href="#az-scenes"><i>▶</i> Watch the home respond</a></div>
           <div class="az-hero-nav" aria-label="Choose hero slide">
             <button class="az-hero-arrow az-hero-prev" type="button" aria-label="Previous slide">←</button>
-            <div class="az-hero-dots" role="tablist"><button class="is-active" type="button" data-hero-dot="0" aria-label="Connected living" aria-selected="true"></button><button type="button" data-hero-dot="1" aria-label="Home cinema" aria-selected="false"></button><button type="button" data-hero-dot="2" aria-label="Smart security" aria-selected="false"></button></div>
-            <span class="az-hero-count"><b>01</b> / 03</span>
             <button class="az-hero-arrow az-hero-next" type="button" aria-label="Next slide">→</button>
           </div>
         </div>

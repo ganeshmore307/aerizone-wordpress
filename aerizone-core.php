@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.5.2
+ * Version: 4.6.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.5.2');
+define('AERIZONE_CORE_VERSION', '4.6.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -123,15 +123,41 @@ function aerizone_about() {
 }
 
 function aerizone_services() {
-    return '<main class="az-main">' . aerizone_page_hero('THE AERIZONE ECOSYSTEM', 'Choose a solution.<br>Or connect <em>the entire space.</em>', 'Every Aerizone service is designed to work beautifully on its own—and even better as part of one coordinated system.') . '
-    <section class="az-service-philosophy"><div class="az-wrap"><p class="az-kicker az-dark"><span></span> SOLUTIONS ORGANISED AROUND LIFE</p><h2>We do not begin with a product list.<br><em>We begin with what you want the space to do.</em></h2></div></section>
-    <section class="az-system-groups"><div class="az-wrap">
-      <article class="az-system-group"><div class="az-system-visual az-img-curtains"><span>01 / COMFORT</span></div><div class="az-system-content"><small>MAKE DAILY ROUTINES EFFORTLESS</small><h2>Automation &amp; Comfort</h2><p>Create the right atmosphere without moving from switch to switch. Aerizone coordinates everyday functions into scenes that match how you live.</p><ul><li><strong>Home automation</strong><span>One interface for connected devices and routines</span></li><li><strong>Lighting control</strong><span>Scenes, dimming, schedules and sensor-based response</span></li><li><strong>Motorized curtains &amp; blinds</strong><span>Remote, app, voice or scheduled movement</span></li></ul><a href="' . esc_url(home_url('/contact-us/')) . '">Discuss comfort automation ↗</a></div></article>
-      <article class="az-system-group is-reverse"><div class="az-system-visual az-img-theatre"><span>02 / EXPERIENCE</span></div><div class="az-system-content"><small>BRING CINEMA HOME</small><h2>Home Theatre &amp; AV</h2><p>More than a large screen: a complete environment where picture, sound, seating, lighting and control are considered together.</p><ul><li><strong>4K projection &amp; screens</strong><span>Sharp, properly scaled viewing for the room</span></li><li><strong>Immersive sound</strong><span>Speaker planning and calibrated surround experience</span></li><li><strong>Unified control</strong><span>Start the entire movie scene with one command</span></li></ul><a href="' . esc_url(home_url('/contact-us/')) . '">Plan a home theatre ↗</a></div></article>
-      <article class="az-system-group"><div class="az-system-visual az-img-cctv"><span>03 / CONFIDENCE</span></div><div class="az-system-content"><small>SEE, VERIFY AND CONTROL ACCESS</small><h2>Security &amp; Access</h2><p>A connected view of important areas and entry points helps you respond with confidence whether you are inside the property or away.</p><ul><li><strong>CCTV systems</strong><span>Purposeful camera coverage and remote monitoring</span></li><li><strong>Video intercom</strong><span>See and communicate with visitors before access</span></li><li><strong>Motorized gates</strong><span>Remote, mobile and RFID-enabled entry control</span></li></ul><a href="' . esc_url(home_url('/contact-us/')) . '">Plan security and access ↗</a></div></article>
-      <article class="az-system-group is-reverse"><div class="az-system-visual az-img-home"><span>04 / RELIABILITY</span></div><div class="az-system-content"><small>THE FOUNDATION BEHIND EVERY SMART FEATURE</small><h2>Residential Networking</h2><p>Connected devices are only as reliable as the network behind them. Aerizone plans stable wired and wireless coverage throughout the property.</p><ul><li><strong>Coverage planning</strong><span>Consistent connectivity across rooms and levels</span></li><li><strong>Wired infrastructure</strong><span>A dependable backbone for AV and automation</span></li><li><strong>Connected-device readiness</strong><span>Capacity designed for the systems you use today and tomorrow</span></li></ul><a href="' . esc_url(home_url('/contact-us/')) . '">Discuss networking ↗</a></div></article>
+    $contact = esc_url(home_url('/contact-us/'));
+    return '<main class="az-main az-services-premium">
+    <section class="az-solutions-hero">
+      <div class="az-solutions-hero-bg"></div><div class="az-solutions-hero-shade"></div><div class="az-solutions-hero-grid"></div>
+      <div class="az-wrap az-solutions-hero-inner">
+        <div class="az-solutions-hero-copy">
+          <p class="az-kicker"><span></span> THE AERIZONE ECOSYSTEM</p>
+          <h1>Every system.<br><em>One effortless experience.</em></h1>
+          <p>Lighting, curtains, cinema, security, access and connectivity—planned as one intelligent environment that responds naturally to you.</p>
+          <div class="az-actions"><a class="az-btn" href="#solutions">Explore the ecosystem <span>↗</span></a><a class="az-solutions-contact" href="' . $contact . '">Plan my space <span>↗</span></a></div>
+          <div class="az-solutions-proof"><span><b>01</b> Designed around your routines</span><span><b>02</b> One interface, fewer complications</span><span><b>03</b> Installed and supported end to end</span></div>
+        </div>
+        <div class="az-ecosystem-console" aria-label="Aerizone connected home overview">
+          <div class="az-console-top"><span><i></i> HOME ONLINE</span><small>ALL SYSTEMS NORMAL</small></div>
+          <div class="az-console-scene"><small>ACTIVE SCENE</small><strong>Welcome home</strong><time>18:42</time></div>
+          <div class="az-console-grid"><span><i></i><b>Lighting</b><small>EVENING · 45%</small></span><span><i></i><b>Curtains</b><small>LIVING · OPEN</small></span><span><i></i><b>Climate</b><small>COMFORT · 24°</small></span><span><i></i><b>Security</b><small>HOME MODE</small></span></div>
+          <div class="az-console-flow"><small>ONE COMMAND</small><b>Gate → Lights → Curtains → Security</b></div>
+        </div>
+      </div>
+      <nav class="az-solutions-index" aria-label="Solutions on this page"><div class="az-wrap"><a href="#comfort">Comfort</a><a href="#cinema">Entertainment</a><a href="#security">Security</a><a href="#network">Connectivity</a></div></nav>
+    </section>
+
+    <section class="az-service-philosophy"><div class="az-wrap"><div><p class="az-kicker az-dark"><span></span> DESIGNED AROUND LIFE</p><h2>Begin with the experience.<br><em>Then make the technology disappear.</em></h2></div><p>Choose one solution or connect the entire property. Every system is planned to feel intuitive on day one—and dependable for years.</p></div></section>
+
+    <section class="az-system-groups" id="solutions"><div class="az-wrap">
+      <article class="az-system-group" id="comfort"><div class="az-system-visual az-img-curtains"><span>01 / COMFORT</span><div class="az-visual-status"><i></i> EVENING SCENE ACTIVE</div></div><div class="az-system-content"><small>MAKE DAILY ROUTINES EFFORTLESS</small><h2>Automation<br>&amp; Comfort</h2><p>Walk into the right atmosphere. Aerizone coordinates lights, curtains and daily routines so the space responds without a wall full of switches.</p><ul><li><strong>Home automation</strong><span>One simple interface for connected devices and scenes</span></li><li><strong>Lighting control</strong><span>Dimming, schedules and sensor-led response</span></li><li><strong>Motorized curtains</strong><span>App, voice, remote or automatic movement</span></li></ul><a href="' . $contact . '">Design my comfort experience <span>↗</span></a></div></article>
+      <article class="az-system-group is-reverse" id="cinema"><div class="az-system-visual az-img-theatre"><span>02 / EXPERIENCE</span><div class="az-visual-status"><i></i> CINEMA READY</div></div><div class="az-system-content"><small>BRING CINEMA HOME</small><h2>Home Theatre<br>&amp; AV</h2><p>Picture, sound, lighting and control are designed as one environment—so movie night begins with a single touch, not a sequence of remotes.</p><ul><li><strong>4K projection</strong><span>Properly scaled screens and crisp, immersive picture</span></li><li><strong>Calibrated sound</strong><span>Speaker and acoustic planning for every seat</span></li><li><strong>Unified control</strong><span>Start the complete cinema scene with one command</span></li></ul><a href="' . $contact . '">Plan my home theatre <span>↗</span></a></div></article>
+      <article class="az-system-group" id="security"><div class="az-system-visual az-img-cctv"><span>03 / CONFIDENCE</span><div class="az-visual-status"><i></i> PROPERTY SECURED</div></div><div class="az-system-content"><small>SEE, VERIFY AND CONTROL ACCESS</small><h2>Security<br>&amp; Access</h2><p>Know what matters without watching everything. Surveillance, video intercom and entry control work together to keep you aware at home or away.</p><ul><li><strong>CCTV surveillance</strong><span>Purposeful coverage with remote monitoring</span></li><li><strong>Video intercom</strong><span>See and speak with visitors before granting access</span></li><li><strong>Gate automation</strong><span>Remote, mobile and RFID-enabled entry</span></li></ul><a href="' . $contact . '">Plan security and access <span>↗</span></a></div></article>
+      <article class="az-system-group is-reverse" id="network"><div class="az-system-visual az-img-home"><span>04 / RELIABILITY</span><div class="az-visual-status"><i></i> ALL ROOMS CONNECTED</div></div><div class="az-system-content"><small>THE FOUNDATION BEHIND EVERY SMART FEATURE</small><h2>Residential<br>Networking</h2><p>A connected home is only as reliable as the network behind it. We plan coverage, cabling and capacity as infrastructure—not as an afterthought.</p><ul><li><strong>Coverage planning</strong><span>Consistent connectivity across rooms and levels</span></li><li><strong>Wired backbone</strong><span>Dependable infrastructure for AV and automation</span></li><li><strong>Future readiness</strong><span>Capacity for today’s systems and tomorrow’s additions</span></li></ul><a href="' . $contact . '">Plan the network foundation <span>↗</span></a></div></article>
     </div></section>
-    <section class="az-integration-map"><div class="az-wrap"><div><p class="az-kicker"><span></span> WHY INTEGRATION MATTERS</p><h2>Four systems.<br>One familiar experience.</h2></div><div class="az-map"><span>COMFORT</span><span>ENTERTAINMENT</span><span>SECURITY</span><span>CONNECTIVITY</span><b>AERIZONE</b></div></div></section>' . aerizone_cta() . '</main>';
+
+    <section class="az-integration-map"><div class="az-wrap">
+      <div class="az-integration-copy"><p class="az-kicker"><span></span> WHY INTEGRATION MATTERS</p><h2>One moment.<br><em>Every system responds.</em></h2><p>Aerizone scenes turn separate technologies into one familiar action. Your home feels simpler because the complexity has already been considered.</p><a href="' . $contact . '">Create my connected scene <span>↗</span></a></div>
+      <div class="az-scene-demo"><div class="az-scene-head"><span><i></i> WELCOME HOME</span><small>SCENE RUNNING</small></div><ol><li><b>01</b><span><strong>Gate opens</strong><small>Secure entry confirmed</small></span><em>DONE</em></li><li><b>02</b><span><strong>Entry lights settle</strong><small>Warm scene at 45%</small></span><em>DONE</em></li><li><b>03</b><span><strong>Curtains adjust</strong><small>Living areas opened</small></span><em>DONE</em></li><li><b>04</b><span><strong>Security changes mode</strong><small>Perimeter stays protected</small></span><em>ACTIVE</em></li></ol><div class="az-scene-result"><small>RESULT</small><b>The space is ready before you reach the room.</b></div></div>
+    </div></section>' . aerizone_cta() . '</main>';
 }
 
 function aerizone_contact() {

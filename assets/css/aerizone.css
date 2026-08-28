@@ -2030,3 +2030,29 @@
  #aerizone-app .az-motion-lighting .az-motion-media{background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85")}
  #aerizone-app .az-motion-cinema .az-motion-media{background-image:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=85")}
 }
+
+
+/* Aerizone 4.8.1 — equal, brand-led automation films */
+#aerizone-app .az-motion-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+#aerizone-app .az-motion-card{display:flex;flex-direction:column}
+#aerizone-app .az-motion-media,
+#aerizone-app .az-motion-cinema .az-motion-media{height:430px}
+#aerizone-app .az-motion-copy{display:flex;flex:1;flex-direction:column;min-height:300px}
+#aerizone-app .az-motion-copy a{margin-top:auto}
+#aerizone-app .az-motion-living .az-motion-media video{object-position:center 55%}
+#aerizone-app .az-motion-security .az-motion-media video{object-position:center center}
+#aerizone-app .az-motion-data{position:absolute;left:24px;right:24px;bottom:22px;display:flex;gap:7px;flex-wrap:wrap;z-index:2}
+#aerizone-app .az-motion-data span{padding:8px 10px;border:1px solid rgba(166,224,229,.42);background:rgba(4,27,32,.74);color:#eaf8f9;font:600 7px 'DM Mono',monospace;letter-spacing:.08em;backdrop-filter:blur(9px)}
+@media(max-width:900px){
+ #aerizone-app .az-motion-grid{grid-template-columns:1fr}
+ #aerizone-app .az-motion-media,#aerizone-app .az-motion-cinema .az-motion-media{height:430px}
+}
+@media(max-width:600px){
+ #aerizone-app .az-motion-media,#aerizone-app .az-motion-cinema .az-motion-media{height:320px}
+ #aerizone-app .az-motion-data{left:16px;right:16px;bottom:16px}
+ #aerizone-app .az-motion-status{left:16px;top:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ #aerizone-app .az-motion-living .az-motion-media{background-image:url("https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=1400")}
+ #aerizone-app .az-motion-security .az-motion-media{background-image:url("https://images.pexels.com/photos/3205735/pexels-photo-3205735.jpeg?auto=compress&cs=tinysrgb&w=1400")}
+}

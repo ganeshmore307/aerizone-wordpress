@@ -943,3 +943,9 @@
 @media(prefers-reduced-motion:reduce){
   #aerizone-app .az-hero-slide,#aerizone-app .az-hero-copy-pane{transition:none!important;animation:none!important;transform:none!important}
 }
+
+
+/* Aerizone 4.3.1 — minimal slider controls */
+#aerizone-app .az-hero-nav{gap:10px!important}
+#aerizone-app .az-hero-dots,
+#aerizone-app .az-hero-count{display:none!important}

@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.6.1
+ * Version: 4.6.2
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.6.1');
+define('AERIZONE_CORE_VERSION', '4.6.2');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -125,27 +125,19 @@ function aerizone_about() {
 function aerizone_services() {
     $contact = esc_url(home_url('/contact-us/'));
     return '<main class="az-main az-services-premium">
-    <section class="az-solutions-hero az-solutions-hero-v2">
+    <section class="az-solutions-hero az-solutions-hero-v3">
       <div class="az-solutions-hero-bg"></div><div class="az-solutions-hero-shade"></div><div class="az-solutions-hero-grid"></div>
-      <div class="az-wrap az-solutions-hero-inner">
+      <div class="az-wrap az-solutions-editorial">
         <div class="az-solutions-hero-copy">
-          <p class="az-kicker"><span></span> AERIZONE CONNECTED LIVING</p>
-          <h1>Intelligence<br>you <em>feel.</em><br><span>Technology you don’t.</span></h1>
-          <p>We design lighting, curtains, entertainment, security and access as one calm, intuitive experience—built around the way you live.</p>
-          <div class="az-actions"><a class="az-btn" href="#solutions">Discover our solutions <span>↗</span></a><a class="az-solutions-contact" href="' . $contact . '">Start a conversation <span>↗</span></a></div>
+          <p class="az-kicker"><span></span> AERIZONE AUTOMATION &amp; SECURITY</p>
+          <h1>Spaces that<br><em>think ahead.</em></h1>
+          <p class="az-solutions-lead">One intelligently connected environment for comfort, entertainment and confidence—designed around your life, not around the technology.</p>
+          <div class="az-actions"><a class="az-btn" href="#solutions">Explore solutions <span>↗</span></a><a class="az-solutions-contact" href="' . $contact . '">Plan your experience <span>↗</span></a></div>
+          <div class="az-solutions-promise"><span><i></i> SYSTEMS ONLINE</span><p>Lighting · Curtains · Cinema · Security · Access</p></div>
         </div>
-        <div class="az-hero-experience" aria-label="A connected Aerizone evening scene">
-          <div class="az-experience-card">
-            <div class="az-experience-top"><span><i></i> EVENING SCENE</span><small>18:42</small></div>
-            <strong>Arrive home.<br>Everything is ready.</strong>
-            <p>The gate opens, selected lights settle, curtains adjust and security changes mode—together.</p>
-            <div class="az-experience-progress"><span class="is-done">Gate</span><span class="is-done">Lights</span><span class="is-done">Curtains</span><span class="is-live">Secure</span></div>
-          </div>
-          <div class="az-floating-cue az-cue-light"><i></i><span><small>LIGHTING</small>Warm · 45%</span></div>
-          <div class="az-floating-cue az-cue-security"><i></i><span><small>SECURITY</small>Home mode</span></div>
-        </div>
+        <div class="az-solutions-side-note"><span>CONNECTED LIVING</span><b>01</b><p>Technology is most powerful when you barely notice it.</p></div>
       </div>
-      <div class="az-solutions-signature"><div class="az-wrap"><span>COMFORT</span><i></i><span>ENTERTAINMENT</span><i></i><span>CONFIDENCE</span><i></i><span>CONNECTIVITY</span><b>ONE CONNECTED EXPERIENCE</b></div></div>
+      <div class="az-solutions-signature"><div class="az-wrap"><span>DESIGN</span><i></i><span>INTEGRATION</span><i></i><span>PROGRAMMING</span><i></i><span>SUPPORT</span><b>ONE ACCOUNTABLE TEAM</b></div></div>
     </section>
 
     <section class="az-service-philosophy"><div class="az-wrap"><div><p class="az-kicker az-dark"><span></span> DESIGNED AROUND LIFE</p><h2>Begin with the experience.<br><em>Then make the technology disappear.</em></h2></div><p>Choose one solution or connect the entire property. Every system is planned to feel intuitive on day one—and dependable for years.</p></div></section>

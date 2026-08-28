@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.2.5
+ * Version: 4.3.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.2.5');
+define('AERIZONE_CORE_VERSION', '4.3.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -55,10 +55,40 @@ function aerizone_dashboard() {
 
 function aerizone_home() {
     return '<main class="az-main az-new-home">
-    <section class="az-auto-hero">
+    <section class="az-auto-hero" data-az-hero aria-roledescription="carousel" aria-label="Aerizone experiences">
+      <div class="az-hero-slides" aria-hidden="true">
+        <div class="az-hero-slide az-hero-slide-home is-active"></div>
+        <div class="az-hero-slide az-hero-slide-cinema"></div>
+        <div class="az-hero-slide az-hero-slide-security"></div>
+      </div>
       <div class="az-auto-shade"></div><div class="az-auto-grid"></div>
       <div class="az-wrap az-auto-hero-inner">
-        <div class="az-auto-copy aerizone-reveal"><p class="az-kicker"><span></span> INTELLIGENT SPACES · DESIGNED AROUND YOU</p><h1>Your space,<br><em>instinctively yours.</em></h1><p>Aerizone brings lighting, curtains, entertainment, access and security into one beautifully simple experience.</p><div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Design my experience <span>↗</span></a><a class="az-auto-play" href="#az-scenes"><i>▶</i> Watch the home respond</a></div><div class="az-hero-proof"><span><b>01</b> One connected ecosystem</span><span><b>02</b> Designed, installed &amp; supported</span><span><b>03</b> Built around your lifestyle</span></div></div>
+        <div class="az-auto-copy aerizone-reveal">
+          <div class="az-hero-copy-track">
+            <article class="az-hero-copy-pane is-active" data-hero-copy="0">
+              <p class="az-kicker"><span></span> CONNECTED LIVING · DESIGNED AROUND YOU</p>
+              <h1>Your space,<br><em>instinctively yours.</em></h1>
+              <p>Aerizone brings lighting, curtains, entertainment, access and security into one beautifully simple experience.</p>
+            </article>
+            <article class="az-hero-copy-pane" data-hero-copy="1" hidden>
+              <p class="az-kicker"><span></span> IMMERSIVE HOME CINEMA</p>
+              <h1>Every seat.<br><em>The best seat.</em></h1>
+              <p>Picture, sound, lighting and control work as one—so movie night begins with a single touch.</p>
+            </article>
+            <article class="az-hero-copy-pane" data-hero-copy="2" hidden>
+              <p class="az-kicker"><span></span> INTELLIGENT SECURITY &amp; ACCESS</p>
+              <h1>Always aware.<br><em>Effortlessly secure.</em></h1>
+              <p>See visitors, manage gates and protect important spaces from home or away, without adding complexity.</p>
+            </article>
+          </div>
+          <div class="az-actions"><a class="az-btn az-btn-primary" href="' . esc_url(home_url('/contact-us/')) . '">Design my experience <span>↗</span></a><a class="az-auto-play" href="#az-scenes"><i>▶</i> Watch the home respond</a></div>
+          <div class="az-hero-nav" aria-label="Choose hero slide">
+            <button class="az-hero-arrow az-hero-prev" type="button" aria-label="Previous slide">←</button>
+            <div class="az-hero-dots" role="tablist"><button class="is-active" type="button" data-hero-dot="0" aria-label="Connected living" aria-selected="true"></button><button type="button" data-hero-dot="1" aria-label="Home cinema" aria-selected="false"></button><button type="button" data-hero-dot="2" aria-label="Smart security" aria-selected="false"></button></div>
+            <span class="az-hero-count"><b>01</b> / 03</span>
+            <button class="az-hero-arrow az-hero-next" type="button" aria-label="Next slide">→</button>
+          </div>
+        </div>
         <div class="az-live-panel aerizone-reveal"><div class="az-live-head"><span><i></i> HOME ONLINE</span><b>ALL SYSTEMS NORMAL</b></div><div class="az-live-room"><small>LIVING ROOM</small><strong>Evening scene</strong><span>24°</span></div><div class="az-live-devices"><button class="is-active"><i>◉</i><span>Lights</span><b>68%</b></button><button class="is-active"><i>◒</i><span>Curtains</span><b>CLOSED</b></button><button><i>▷</i><span>Cinema</span><b>READY</b></button><button class="is-active"><i>⌂</i><span>Security</span><b>ARMED</b></button></div><div class="az-live-footer"><span>ACTIVE SCENE</span><b>Welcome home</b><i>→</i></div></div>
       </div>
       <div class="az-auto-status"><div class="az-wrap"><span><i class="is-green"></i> Main gate locked</span><span><i></i> 8 lights active</span><span><i></i> Curtains 68%</span><span><i class="is-green"></i> Security armed</span></div></div>

@@ -24,6 +24,63 @@
     const text = `Hello Aerizone, I would like to discuss a project.\n\nName: ${data.get('name')}\nPhone: ${data.get('phone')}\nInterest: ${data.get('interest')}\nSpace/Requirement: ${data.get('message') || 'Not specified'}`;
     window.open(`https://wa.me/919011512832?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
+  const hero = app.querySelector('[data-az-hero]');
+  if (hero) {
+    const slides = [...hero.querySelectorAll('.az-hero-slide')];
+    const copies = [...hero.querySelectorAll('[data-hero-copy]')];
+    const dots = [...hero.querySelectorAll('[data-hero-dot]')];
+    const count = hero.querySelector('.az-hero-count b');
+    const previous = hero.querySelector('.az-hero-prev');
+    const next = hero.querySelector('.az-hero-next');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let active = 0;
+    let timer = null;
+    let touchStart = 0;
+
+    const showHeroSlide = (index, userInitiated = false) => {
+      active = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === active));
+      copies.forEach((copy, i) => {
+        const selected = i === active;
+        copy.hidden = !selected;
+        copy.classList.toggle('is-active', selected);
+      });
+      dots.forEach((dot, i) => {
+        const selected = i === active;
+        dot.classList.toggle('is-active', selected);
+        dot.setAttribute('aria-selected', String(selected));
+      });
+      if (count) count.textContent = String(active + 1).padStart(2, '0');
+      if (userInitiated) restartHero();
+    };
+    const stopHero = () => { if (timer) window.clearInterval(timer); timer = null; };
+    const startHero = () => {
+      if (reduceMotion || slides.length < 2) return;
+      stopHero();
+      timer = window.setInterval(() => showHeroSlide(active + 1), 6500);
+    };
+    const restartHero = () => { stopHero(); startHero(); };
+
+    previous?.addEventListener('click', () => showHeroSlide(active - 1, true));
+    next?.addEventListener('click', () => showHeroSlide(active + 1, true));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => showHeroSlide(i, true)));
+    hero.addEventListener('mouseenter', stopHero);
+    hero.addEventListener('mouseleave', startHero);
+    hero.addEventListener('focusin', stopHero);
+    hero.addEventListener('focusout', startHero);
+    hero.addEventListener('touchstart', event => { touchStart = event.changedTouches[0].clientX; }, {passive:true});
+    hero.addEventListener('touchend', event => {
+      const distance = event.changedTouches[0].clientX - touchStart;
+      if (Math.abs(distance) > 45) showHeroSlide(active + (distance < 0 ? 1 : -1), true);
+    }, {passive:true});
+    hero.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') showHeroSlide(active - 1, true);
+      if (event.key === 'ArrowRight') showHeroSlide(active + 1, true);
+    });
+    document.addEventListener('visibilitychange', () => document.hidden ? stopHero() : startHero());
+    startHero();
+  }
+
   const sceneStage = app.querySelector('.az-scene-stage');
   const sceneButtons = app.querySelectorAll('.az-scene-tabs [data-scene]');
   const scenePanes = app.querySelectorAll('.az-scene-pane[data-pane]');

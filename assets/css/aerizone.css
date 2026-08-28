@@ -859,3 +859,18 @@
     background:#fff!important;
   }
 }
+
+
+/* Aerizone 4.2.4 — accessible contrast for all dark page heroes */
+#aerizone-app .az-page-hero h1{
+  color:#f7fbfb!important;
+}
+#aerizone-app .az-page-hero h1 em{
+  color:#8ee4eb!important;
+}
+#aerizone-app .az-page-hero .az-kicker{
+  color:#9ee9ef!important;
+}
+#aerizone-app .az-page-hero>div.az-wrap>p:last-child{
+  color:#c4d5d8!important;
+}

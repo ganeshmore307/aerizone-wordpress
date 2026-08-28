@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.7.0
+ * Version: 4.8.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.7.0');
+define('AERIZONE_CORE_VERSION', '4.8.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -94,6 +94,14 @@ function aerizone_home() {
       <article class="az-scene-pane" data-pane="welcome"><div><small>19:30 · WELCOME</small><h3>The right atmosphere is waiting.</h3><p>The entrance responds, living areas illuminate and curtains shift into the evening position before you settle in.</p></div><ul><li><span>ENTRY</span><b>ACTIVE</b></li><li><span>LIGHTING</span><b>EVENING · 60%</b></li><li><span>CURTAINS</span><b>CLOSED</b></li></ul></article>
       <article class="az-scene-pane" data-pane="cinema"><div><small>21:00 · CINEMA</small><h3>One command. The room disappears.</h3><p>Lights dim, curtains close and the AV system starts together—leaving only the film, the sound and the moment.</p></div><ul><li><span>LIGHTING</span><b>DIM · 8%</b></li><li><span>CURTAINS</span><b>CLOSED</b></li><li><span>THEATRE</span><b>PLAYING</b></li></ul></article>
     </div></div></section>
+    <section class="az-motion-stories" aria-labelledby="az-motion-title"><div class="az-wrap">
+      <div class="az-motion-heading"><div><p class="az-kicker az-dark"><span></span> AERIZONE IN MOTION</p><h2 id="az-motion-title">See the experience.<br><em>Not the complexity.</em></h2></div><p>Thoughtful automation is best understood in motion: one touch, one response, one beautifully coordinated space.</p></div>
+      <div class="az-motion-grid">
+        <article class="az-motion-card az-motion-lighting"><div class="az-motion-media"><video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"><source src="https://videos.pexels.com/video-files/5498990/5498990-hd_1920_1080_25fps.mp4" type="video/mp4"></video><div class="az-motion-shade"></div><span class="az-motion-status"><i></i> SCENE ACTIVE</span><b>01</b></div><div class="az-motion-copy"><small>INTELLIGENT LIGHTING</small><h3>The atmosphere changes with one considered action.</h3><p>Scenes coordinate brightness, mood and daily routines without a wall full of switches.</p><a href="' . esc_url(home_url('/services/')) . '">Explore automation <span>↗</span></a></div></article>
+        <article class="az-motion-card az-motion-cinema"><div class="az-motion-media"><video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=85"><source src="https://videos.pexels.com/video-files/855120/855120-hd_1920_1080_25fps.mp4" type="video/mp4"></video><div class="az-motion-shade"></div><span class="az-motion-status"><i></i> CINEMA READY</span><b>02</b></div><div class="az-motion-copy"><small>HOME THEATRE &amp; AV</small><h3>Picture, sound and control begin together.</h3><p>A cinema scene prepares the complete room, leaving only the experience.</p><a href="' . esc_url(home_url('/services/')) . '">Discover home cinema <span>↗</span></a></div></article>
+      </div>
+      <p class="az-motion-credit">Demonstration footage: <a href="https://www.pexels.com/video/a-person-switching-lights-5498990/" target="_blank" rel="noopener">Bonus Studio</a> and <a href="https://www.pexels.com/video/close-up-video-of-projector-855120/" target="_blank" rel="noopener">Pixabay via Pexels</a>.</p>
+    </div></section>
     <section class="az-home-solutions"><div class="az-wrap"><div class="az-section-heading"><div><p class="az-kicker az-dark"><span></span> THE AERIZONE ECOSYSTEM</p><h2>Comfort, cinema and security.<br>Connected beautifully.</h2><p class="az-section-copy">Choose one solution or bring every room together as one dependable ecosystem.</p></div><a class="az-text-link" href="' . esc_url(home_url('/services/')) . '">Explore all solutions <span>→</span></a></div><div class="az-solution-mosaic"><a class="az-sol-card az-img-curtains" href="' . esc_url(home_url('/services/')) . '"><span>01</span><div><small>COMFORT</small><h3>Automation, lighting &amp; curtains</h3></div></a><a class="az-sol-card az-img-theatre" href="' . esc_url(home_url('/services/')) . '"><span>02</span><div><small>EXPERIENCE</small><h3>Home theatre &amp; AV</h3></div></a><a class="az-sol-card az-img-cctv" href="' . esc_url(home_url('/services/')) . '"><span>03</span><div><small>CONFIDENCE</small><h3>CCTV, intercom &amp; access</h3></div></a><a class="az-sol-card az-img-home" href="' . esc_url(home_url('/services/')) . '"><span>04</span><div><small>RELIABILITY</small><h3>Residential networking</h3></div></a></div></div></section>
     <section class="az-one-system"><div class="az-wrap"><div class="az-system-intro"><p class="az-kicker"><span></span> THE AERIZONE METHOD</p><h2>One vision.<br><em>One accountable team.</em></h2><p>From the first conversation to everyday use, every device is planned as part of one calm, dependable experience.</p><a href="' . esc_url(home_url('/about-us/')) . '">How we work <span>↗</span></a></div><div class="az-system-path"><article><b>01</b><div><small>DISCOVER</small><h3>We listen to how you live.</h3><p>Your routines, rooms, priorities and future plans shape the brief.</p></div></article><article><b>02</b><div><small>DESIGN</small><h3>Every detail is planned together.</h3><p>Lighting, security, entertainment and control become one blueprint.</p></div></article><article><b>03</b><div><small>INTEGRATE</small><h3>Technology disappears into the space.</h3><p>We install, program and test the complete connected experience.</p></div></article><article><b>04</b><div><small>SUPPORT</small><h3>Confidence continues after handover.</h3><p>Clear guidance and dependable support keep everything effortless.</p></div></article></div></div></section>
     ' . aerizone_cta() . '</main>';

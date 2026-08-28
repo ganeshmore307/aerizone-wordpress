@@ -2056,3 +2056,28 @@
  #aerizone-app .az-motion-living .az-motion-media{background-image:url("https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=1400")}
  #aerizone-app .az-motion-security .az-motion-media{background-image:url("https://images.pexels.com/photos/3205735/pexels-photo-3205735.jpeg?auto=compress&cs=tinysrgb&w=1400")}
 }
+
+
+/* Aerizone 4.8.2 — three equal automation stories */
+#aerizone-app .az-motion-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#aerizone-app .az-motion-media,
+#aerizone-app .az-motion-cinema .az-motion-media{height:350px}
+#aerizone-app .az-motion-copy{min-height:330px;padding:30px 28px 32px}
+#aerizone-app .az-motion-copy h3{font-size:clamp(25px,2vw,33px)}
+#aerizone-app .az-motion-curtains .az-motion-media video{object-position:center center}
+@media(max-width:1080px){
+ #aerizone-app .az-motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #aerizone-app .az-motion-card:last-child{grid-column:1/-1}
+ #aerizone-app .az-motion-card:last-child .az-motion-media{height:410px}
+}
+@media(max-width:700px){
+ #aerizone-app .az-motion-grid{grid-template-columns:1fr}
+ #aerizone-app .az-motion-card:last-child{grid-column:auto}
+ #aerizone-app .az-motion-media,
+ #aerizone-app .az-motion-cinema .az-motion-media,
+ #aerizone-app .az-motion-card:last-child .az-motion-media{height:320px}
+ #aerizone-app .az-motion-copy{min-height:0}
+}
+@media(prefers-reduced-motion:reduce){
+ #aerizone-app .az-motion-curtains .az-motion-media{background-image:url("https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1400")}
+}

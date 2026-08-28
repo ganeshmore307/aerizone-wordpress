@@ -694,3 +694,144 @@
   #aerizone-app .az-auto-copy h1{font-size:39px!important;max-width:310px!important}
   #aerizone-app .az-auto-status .az-wrap{padding-left:12px!important;padding-right:12px!important}
 }
+
+
+/* Aerizone 4.2.2 — mobile hero rebuilt as one clean vertical composition */
+@media(max-width:900px){
+  #aerizone-app .az-auto-hero{
+    min-height:0!important;
+    height:auto!important;
+    overflow:hidden!important;
+    background-position:58% center!important;
+    background-attachment:scroll!important;
+  }
+  #aerizone-app .az-auto-shade{
+    background:linear-gradient(180deg,rgba(3,18,22,.97) 0%,rgba(3,18,22,.93) 52%,rgba(3,18,22,.76) 100%)!important;
+  }
+  #aerizone-app .az-auto-hero-inner{
+    width:min(100% - 40px,680px)!important;
+    max-width:680px!important;
+    min-height:0!important;
+    margin:0 auto!important;
+    padding:54px 0 38px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    grid-template-columns:none!important;
+    align-items:stretch!important;
+    gap:36px!important;
+  }
+  #aerizone-app .az-auto-copy{
+    width:100%!important;
+    max-width:560px!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  #aerizone-app .az-auto-copy h1{
+    max-width:520px!important;
+    margin:19px 0 20px!important;
+    font-size:clamp(42px,10vw,62px)!important;
+    line-height:1.01!important;
+    letter-spacing:-.045em!important;
+  }
+  #aerizone-app .az-auto-copy>p:not(.az-kicker){
+    max-width:520px!important;
+    font-size:16px!important;
+    line-height:1.7!important;
+  }
+  #aerizone-app .az-auto-copy .az-actions{
+    margin-top:28px!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:16px!important;
+  }
+  #aerizone-app .az-hero-proof{display:none!important}
+  #aerizone-app .az-live-panel{
+    order:2!important;
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    max-width:560px!important;
+    margin:0!important;
+    padding:14px!important;
+    transform:none!important;
+    align-self:flex-start!important;
+    border-radius:2px!important;
+  }
+  #aerizone-app .az-auto-status{display:none!important}
+}
+@media(max-width:600px){
+  #aerizone-app .az-auto-hero{
+    background-position:64% center!important;
+  }
+  #aerizone-app .az-auto-hero-inner{
+    width:calc(100% - 36px)!important;
+    padding:42px 0 28px!important;
+    gap:28px!important;
+  }
+  #aerizone-app .az-auto-copy h1{
+    max-width:330px!important;
+    font-size:42px!important;
+    line-height:1.02!important;
+    margin:17px 0 18px!important;
+  }
+  #aerizone-app .az-auto-copy>p:not(.az-kicker){
+    max-width:335px!important;
+    font-size:15px!important;
+    line-height:1.65!important;
+  }
+  #aerizone-app .az-auto-copy .az-actions{
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:10px!important;
+    margin-top:25px!important;
+  }
+  #aerizone-app .az-auto-copy .az-btn-primary{
+    width:100%!important;
+    min-height:56px!important;
+    padding:16px 18px!important;
+  }
+  #aerizone-app .az-auto-play{
+    width:100%!important;
+    min-height:52px!important;
+    padding:4px 0!important;
+  }
+  #aerizone-app .az-live-panel{
+    max-width:none!important;
+    padding:10px!important;
+    box-shadow:0 20px 50px rgba(0,0,0,.32)!important;
+  }
+  #aerizone-app .az-live-head{
+    padding:7px 5px 12px!important;
+  }
+  #aerizone-app .az-live-head>b{display:none!important}
+  #aerizone-app .az-live-room{
+    min-height:82px!important;
+    margin-top:8px!important;
+    padding:17px!important;
+  }
+  #aerizone-app .az-live-room strong{font-size:20px!important}
+  #aerizone-app .az-live-room>span{
+    right:17px!important;
+    font-size:32px!important;
+  }
+  #aerizone-app .az-live-devices{
+    grid-template-columns:1fr 1fr!important;
+    gap:7px!important;
+    margin-top:7px!important;
+  }
+  #aerizone-app .az-live-devices button{
+    min-width:0!important;
+    min-height:66px!important;
+    padding:10px 11px!important;
+  }
+  #aerizone-app .az-live-footer{
+    min-height:54px!important;
+    margin-top:7px!important;
+    padding:14px 12px!important;
+  }
+}
+@media(max-width:360px){
+  #aerizone-app .az-auto-hero-inner{width:calc(100% - 28px)!important}
+  #aerizone-app .az-auto-copy h1{font-size:38px!important}
+  #aerizone-app .az-auto-copy>p:not(.az-kicker){font-size:14px!important}
+}

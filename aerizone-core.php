@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.6.0
+ * Version: 4.6.1
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.6.0');
+define('AERIZONE_CORE_VERSION', '4.6.1');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -125,24 +125,27 @@ function aerizone_about() {
 function aerizone_services() {
     $contact = esc_url(home_url('/contact-us/'));
     return '<main class="az-main az-services-premium">
-    <section class="az-solutions-hero">
+    <section class="az-solutions-hero az-solutions-hero-v2">
       <div class="az-solutions-hero-bg"></div><div class="az-solutions-hero-shade"></div><div class="az-solutions-hero-grid"></div>
       <div class="az-wrap az-solutions-hero-inner">
         <div class="az-solutions-hero-copy">
-          <p class="az-kicker"><span></span> THE AERIZONE ECOSYSTEM</p>
-          <h1>Every system.<br><em>One effortless experience.</em></h1>
-          <p>Lighting, curtains, cinema, security, access and connectivity—planned as one intelligent environment that responds naturally to you.</p>
-          <div class="az-actions"><a class="az-btn" href="#solutions">Explore the ecosystem <span>↗</span></a><a class="az-solutions-contact" href="' . $contact . '">Plan my space <span>↗</span></a></div>
-          <div class="az-solutions-proof"><span><b>01</b> Designed around your routines</span><span><b>02</b> One interface, fewer complications</span><span><b>03</b> Installed and supported end to end</span></div>
+          <p class="az-kicker"><span></span> AERIZONE CONNECTED LIVING</p>
+          <h1>Intelligence<br>you <em>feel.</em><br><span>Technology you don’t.</span></h1>
+          <p>We design lighting, curtains, entertainment, security and access as one calm, intuitive experience—built around the way you live.</p>
+          <div class="az-actions"><a class="az-btn" href="#solutions">Discover our solutions <span>↗</span></a><a class="az-solutions-contact" href="' . $contact . '">Start a conversation <span>↗</span></a></div>
         </div>
-        <div class="az-ecosystem-console" aria-label="Aerizone connected home overview">
-          <div class="az-console-top"><span><i></i> HOME ONLINE</span><small>ALL SYSTEMS NORMAL</small></div>
-          <div class="az-console-scene"><small>ACTIVE SCENE</small><strong>Welcome home</strong><time>18:42</time></div>
-          <div class="az-console-grid"><span><i></i><b>Lighting</b><small>EVENING · 45%</small></span><span><i></i><b>Curtains</b><small>LIVING · OPEN</small></span><span><i></i><b>Climate</b><small>COMFORT · 24°</small></span><span><i></i><b>Security</b><small>HOME MODE</small></span></div>
-          <div class="az-console-flow"><small>ONE COMMAND</small><b>Gate → Lights → Curtains → Security</b></div>
+        <div class="az-hero-experience" aria-label="A connected Aerizone evening scene">
+          <div class="az-experience-card">
+            <div class="az-experience-top"><span><i></i> EVENING SCENE</span><small>18:42</small></div>
+            <strong>Arrive home.<br>Everything is ready.</strong>
+            <p>The gate opens, selected lights settle, curtains adjust and security changes mode—together.</p>
+            <div class="az-experience-progress"><span class="is-done">Gate</span><span class="is-done">Lights</span><span class="is-done">Curtains</span><span class="is-live">Secure</span></div>
+          </div>
+          <div class="az-floating-cue az-cue-light"><i></i><span><small>LIGHTING</small>Warm · 45%</span></div>
+          <div class="az-floating-cue az-cue-security"><i></i><span><small>SECURITY</small>Home mode</span></div>
         </div>
       </div>
-      <nav class="az-solutions-index" aria-label="Solutions on this page"><div class="az-wrap"><a href="#comfort">Comfort</a><a href="#cinema">Entertainment</a><a href="#security">Security</a><a href="#network">Connectivity</a></div></nav>
+      <div class="az-solutions-signature"><div class="az-wrap"><span>COMFORT</span><i></i><span>ENTERTAINMENT</span><i></i><span>CONFIDENCE</span><i></i><span>CONNECTIVITY</span><b>ONE CONNECTED EXPERIENCE</b></div></div>
     </section>
 
     <section class="az-service-philosophy"><div class="az-wrap"><div><p class="az-kicker az-dark"><span></span> DESIGNED AROUND LIFE</p><h2>Begin with the experience.<br><em>Then make the technology disappear.</em></h2></div><p>Choose one solution or connect the entire property. Every system is planned to feel intuitive on day one—and dependable for years.</p></div></section>

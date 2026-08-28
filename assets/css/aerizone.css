@@ -2081,3 +2081,22 @@
 @media(prefers-reduced-motion:reduce){
  #aerizone-app .az-motion-curtains .az-motion-media{background-image:url("https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1400")}
 }
+
+
+/* Aerizone 4.8.3 — refined About ecosystem imagery */
+#aerizone-app .az-about-comfort{
+ background-image:url('https://images.unsplash.com/photo-1758448755927-e5c5ae14790c?auto=format&fit=crop&w=1600&q=88');
+ background-position:center 58%;
+}
+#aerizone-app .az-about-experience{
+ background-image:url('https://images.unsplash.com/photo-1724061409979-420a38c25bcc?auto=format&fit=crop&w=1600&q=88');
+ background-position:center;
+}
+#aerizone-app .az-about-confidence{
+ background-image:url('https://images.unsplash.com/photo-1716380703770-c3dd70781e82?auto=format&fit=crop&w=1600&q=88');
+ background-position:center;
+}
+#aerizone-app .az-about-foundation{
+ background-image:url('https://images.unsplash.com/photo-1753272691001-4d68806ac590?auto=format&fit=crop&w=1600&q=88');
+ background-position:center;
+}

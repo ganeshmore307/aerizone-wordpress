@@ -2100,3 +2100,56 @@
  background-image:url('https://images.unsplash.com/photo-1753272691001-4d68806ac590?auto=format&fit=crop&w=1600&q=88');
  background-position:center;
 }
+
+
+/* Aerizone 4.8.4 — readable premium About service rail */
+#aerizone-app .az-about-hero-foot{
+ background:rgba(3,25,30,.97);
+ border-top:1px solid rgba(142,228,235,.34);
+ box-shadow:0 -12px 36px rgba(0,0,0,.16);
+ backdrop-filter:blur(12px);
+}
+#aerizone-app .az-about-hero-foot .az-wrap{
+ height:76px;
+ gap:20px;
+}
+#aerizone-app .az-about-hero-foot span{
+ display:inline-flex;
+ align-items:center;
+ min-height:38px;
+ color:#f1fafb;
+ font:650 10px/1.2 'DM Mono',monospace;
+ letter-spacing:.105em;
+ text-shadow:0 1px 12px rgba(0,0,0,.45);
+ white-space:nowrap;
+}
+#aerizone-app .az-about-hero-foot span:before{
+ content:'';
+ width:14px;
+ height:1px;
+ margin-right:10px;
+ background:#63d8e2;
+ box-shadow:0 0 10px rgba(99,216,226,.35);
+}
+#aerizone-app .az-about-hero-foot i{
+ width:3px;
+ height:3px;
+ flex:0 0 3px;
+ background:#63d8e2;
+ box-shadow:0 0 8px rgba(99,216,226,.7);
+}
+@media(max-width:760px){
+ #aerizone-app .az-about-hero-foot{position:relative}
+ #aerizone-app .az-about-hero-foot .az-wrap{
+  height:66px;
+  justify-content:flex-start;
+  gap:24px;
+  overflow-x:auto;
+  padding-right:24px;
+  scrollbar-width:none;
+ }
+ #aerizone-app .az-about-hero-foot .az-wrap::-webkit-scrollbar{display:none}
+ #aerizone-app .az-about-hero-foot span{font-size:9px}
+ #aerizone-app .az-about-hero-foot span:before{width:10px;margin-right:8px}
+ #aerizone-app .az-about-hero-foot i{display:none}
+}

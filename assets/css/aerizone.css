@@ -1519,3 +1519,53 @@
   }
   #aerizone-app .az-about-panel-systems span:last-child{border-bottom:0!important}
 }
+
+
+/* Aerizone 4.5.2 — premium secondary About hero CTA */
+#aerizone-app .az-about-hero-copy .az-actions{
+  gap:12px!important;
+}
+#aerizone-app .az-about-contact{
+  min-height:58px!important;
+  padding:0 24px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:28px!important;
+  border:1px solid rgba(142,228,235,.52)!important;
+  border-radius:2px!important;
+  background:rgba(6,31,36,.54)!important;
+  color:#f5fbfc!important;
+  font-size:13px!important;
+  font-weight:650!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)!important;
+  backdrop-filter:blur(12px)!important;
+  transition:background .25s ease,border-color .25s ease,transform .25s ease!important;
+}
+#aerizone-app .az-about-contact span{
+  color:#8ee4eb!important;
+  font-size:18px!important;
+  line-height:1!important;
+  transition:transform .25s ease!important;
+}
+#aerizone-app .az-about-contact:hover,
+#aerizone-app .az-about-contact:focus-visible{
+  background:#f5fbfc!important;
+  border-color:#f5fbfc!important;
+  color:#082126!important;
+  transform:translateY(-2px)!important;
+}
+#aerizone-app .az-about-contact:hover span,
+#aerizone-app .az-about-contact:focus-visible span{
+  color:#1ea0b0!important;
+  transform:translate(2px,-2px)!important;
+}
+@media(max-width:600px){
+  #aerizone-app .az-about-hero-copy .az-actions{
+    width:100%!important;
+  }
+  #aerizone-app .az-about-contact{
+    width:100%!important;
+    justify-content:space-between!important;
+  }
+}

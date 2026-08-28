@@ -3,14 +3,14 @@
  * Plugin Name: Aerizone Core
  * Plugin URI: https://aerizone.in/
  * Description: Original page system, brand styles and interactions for Aerizone.
- * Version: 4.6.3
+ * Version: 4.7.0
  * Author: Aerizone
  * Text Domain: aerizone-core
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('AERIZONE_CORE_VERSION', '4.6.3');
+define('AERIZONE_CORE_VERSION', '4.7.0');
 define('AERIZONE_CORE_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', function () {
@@ -156,9 +156,59 @@ function aerizone_services() {
 }
 
 function aerizone_contact() {
-    return '<main class="az-main">' . aerizone_page_hero('START WITH YOUR SPACE', 'The right system begins<br>with the <em>right conversation.</em>', 'Tell us how you live, what you want to simplify and what stage your project is at. Aerizone will help shape the right connected experience.') . '
-    <section class="az-consult"><div class="az-wrap"><div class="az-consult-intro"><p class="az-kicker az-dark"><span></span> WHAT WE WILL DISCUSS</p><h2>A consultation that begins with listening.</h2><p>You do not need to know device names or technical specifications. Simply tell us what should feel easier, safer or more enjoyable.</p></div><div class="az-consult-topics"><span>Your property type</span><span>Construction or renovation stage</span><span>Daily routines and priorities</span><span>Automation and security needs</span><span>Entertainment expectations</span><span>Budget and implementation plan</span></div></div></section>
-    <section class="az-contact"><div class="az-wrap az-contact-grid"><div class="az-contact-info"><p class="az-kicker az-dark"><span></span> SPEAK WITH AERIZONE</p><h2>Bring us the space.<br>We will help define the system.</h2><a href="tel:+919011512832"><small>CALL OR WHATSAPP</small><strong>+91 90115 12832</strong><span>↗</span></a><a href="mailto:aerzoneadm@gmail.com"><small>EMAIL</small><strong>aerzoneadm@gmail.com</strong><span>↗</span></a><div><small>LOCATION</small><strong>Nashik, Maharashtra, India</strong></div></div><form class="az-form" id="az-enquiry"><div><label for="az-name">Your name</label><input id="az-name" name="name" required placeholder="Enter your name"></div><div><label for="az-phone">Phone number</label><input id="az-phone" name="phone" required inputmode="tel" placeholder="Enter your phone number"></div><div><label for="az-interest">What should the space do better?</label><select id="az-interest" name="interest"><option>Complete connected-home experience</option><option>Lighting and daily automation</option><option>Home theatre and AV</option><option>Security and access control</option><option>Motorized curtains and blinds</option><option>Residential networking</option></select></div><div><label for="az-message">Tell us about the project</label><textarea id="az-message" name="message" rows="5" placeholder="Property type, project stage, rooms and priorities..."></textarea></div><button class="az-btn az-btn-primary" type="submit">Continue on WhatsApp <span>↗</span></button><p class="az-form-note">Your details will open as a prepared WhatsApp enquiry.</p></form></div></section>' . aerizone_visual_band('contact') . '</main>';
+    return '<main class="az-main az-contact-premium">
+    <section class="az-contact-hero">
+      <div class="az-contact-hero-image"></div><div class="az-contact-hero-shade"></div><div class="az-contact-hero-grid"></div>
+      <div class="az-wrap az-contact-hero-inner">
+        <div class="az-contact-hero-copy">
+          <p class="az-kicker"><span></span> START WITH YOUR SPACE</p>
+          <h1>Let’s design how your space should <em>feel.</em></h1>
+          <p>Tell us what you are building, renovating or trying to simplify. Aerizone will turn your priorities into one considered automation and security plan.</p>
+          <div class="az-contact-actions"><a class="az-btn" href="#start-project">Start my project <span>↗</span></a><a class="az-contact-call" href="tel:+919011512832"><small>CALL AN EXPERT</small><strong>+91 90115 12832</strong></a></div>
+        </div>
+        <aside class="az-contact-brief">
+          <div class="az-brief-head"><span><i></i> CONSULTATION AVAILABLE</span><small>NASHIK · INDIA</small></div>
+          <p>Bring the vision.<br><strong>We will define the system.</strong></p>
+          <ul><li><span>01</span> Your property and project stage</li><li><span>02</span> The routines you want to simplify</li><li><span>03</span> Comfort, entertainment and security priorities</li></ul>
+          <div class="az-brief-foot"><small>NO TECHNICAL BRIEF REQUIRED</small><b>We begin by listening.</b></div>
+        </aside>
+      </div>
+      <div class="az-contact-hero-rail"><div class="az-wrap"><span>RESIDENTIAL</span><i></i><span>COMMERCIAL</span><i></i><span>NEW BUILD</span><i></i><span>RENOVATION</span><b>DESIGN · INTEGRATION · SUPPORT</b></div></div>
+    </section>
+
+    <section class="az-contact-process"><div class="az-wrap">
+      <div class="az-contact-process-head"><div><p class="az-kicker az-dark"><span></span> WHAT HAPPENS NEXT</p><h2>A clear path from conversation<br>to connected experience.</h2></div><p>You do not need product names or technical specifications. We guide the decisions in the right order.</p></div>
+      <div class="az-contact-process-grid">
+        <article><b>01</b><small>DISCOVER</small><h3>We understand the space.</h3><p>Property type, plans, project stage, rooms, routines and priorities.</p></article>
+        <article><b>02</b><small>DEFINE</small><h3>We shape one clear brief.</h3><p>Comfort, entertainment, security, networking and control are considered together.</p></article>
+        <article><b>03</b><small>PLAN</small><h3>You receive a practical direction.</h3><p>A coordinated approach to scope, implementation and the right next step.</p></article>
+      </div>
+    </div></section>
+
+    <section class="az-contact-stage" id="start-project"><div class="az-wrap az-contact-stage-grid">
+      <div class="az-contact-stage-info">
+        <p class="az-kicker"><span></span> SPEAK WITH AERIZONE</p>
+        <h2>One conversation.<br><em>A more intelligent space.</em></h2>
+        <p>Share a few details and we will prepare the conversation around your actual needs—not a generic product list.</p>
+        <div class="az-contact-details">
+          <a href="tel:+919011512832"><span>01</span><div><small>CALL OR WHATSAPP</small><strong>+91 90115 12832</strong></div><b>↗</b></a>
+          <a href="mailto:aerzoneadm@gmail.com"><span>02</span><div><small>EMAIL</small><strong>aerzoneadm@gmail.com</strong></div><b>↗</b></a>
+          <div><span>03</span><div><small>LOCATION</small><strong>Nashik, Maharashtra, India</strong></div></div>
+        </div>
+        <div class="az-contact-assurance"><i></i><span><small>DIRECT CONSULTATION</small>Speak with a team that understands automation, AV and security as one system.</span></div>
+      </div>
+      <form class="az-form az-contact-form-premium" id="az-enquiry">
+        <div class="az-form-heading"><span>PROJECT ENQUIRY</span><small>01 / 04</small><h3>Tell us about your space.</h3><p>We will open a prepared WhatsApp message for you to review before sending.</p></div>
+        <div class="az-form-row"><div><label for="az-name">Your name</label><input id="az-name" name="name" required placeholder="Enter your name"></div><div><label for="az-phone">Phone number</label><input id="az-phone" name="phone" required inputmode="tel" placeholder="+91"></div></div>
+        <div><label for="az-interest">What should the space do better?</label><select id="az-interest" name="interest"><option>Complete connected-home experience</option><option>Lighting and daily automation</option><option>Home theatre and AV</option><option>Security and access control</option><option>Motorized curtains and blinds</option><option>Residential networking</option></select></div>
+        <div><label for="az-message">Tell us about the project</label><textarea id="az-message" name="message" rows="5" placeholder="Property type, new build or renovation, rooms and priorities..."></textarea></div>
+        <button class="az-btn az-btn-primary" type="submit">Prepare my WhatsApp enquiry <span>↗</span></button>
+        <p class="az-form-note"><i></i> Your message remains editable before it is sent.</p>
+      </form>
+    </div></section>
+
+    <section class="az-contact-close"><div class="az-contact-close-image"></div><div class="az-contact-close-shade"></div><div class="az-wrap"><p class="az-kicker"><span></span> FROM ONE ROOM TO AN ENTIRE PROPERTY</p><h2>Ready when you are.<br><em>Built around how you live.</em></h2><a href="tel:+919011512832">Speak to Aerizone <span>↗</span></a></div></section>
+    </main>';
 }
 
 function aerizone_visual_band($context = 'home') {

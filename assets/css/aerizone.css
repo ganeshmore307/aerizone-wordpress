@@ -348,3 +348,217 @@
 #aerizone-app .az-about-premium .az-cta-content h2{font-weight:520!important}
 @media(max-width:900px){#aerizone-app .az-about-method-layout{grid-template-columns:1fr}#aerizone-app .az-about-method-visual{min-height:470px}#aerizone-app .az-about-method-grid{grid-template-columns:1fr 1fr}#aerizone-app .az-about-method-grid article:nth-child(2){border-right:0!important}#aerizone-app .az-about-method-grid article{border-bottom:1px solid #24464c!important}}
 @media(max-width:560px){#aerizone-app .az-about-hero-copy h1{font-size:45px!important}#aerizone-app .az-about-purpose-head h2,#aerizone-app .az-about-eco-head h2{font-size:40px!important}#aerizone-app .az-about-method-visual{min-height:390px;padding:20px}#aerizone-app .az-method-visual-top b{display:none}#aerizone-app .az-method-visual-bottom{padding:20px}#aerizone-app .az-method-visual-bottom strong{font-size:19px}#aerizone-app .az-about-method-grid{grid-template-columns:1fr}#aerizone-app .az-about-method-grid article{border-right:0!important;min-height:205px}#aerizone-app .az-about-method-grid h3{margin-top:30px}}
+
+
+/* Aerizone 4.2.0 — universal premium typography and mobile optimization */
+#aerizone-app{overflow:hidden}
+#aerizone-app *,
+#aerizone-app *:before,
+#aerizone-app *:after{box-sizing:border-box}
+#aerizone-app img{max-width:100%;height:auto}
+#aerizone-app h1,
+#aerizone-app h2,
+#aerizone-app h3,
+#aerizone-app h4{font-weight:500!important;text-wrap:balance}
+#aerizone-app p{font-weight:400;text-wrap:pretty}
+#aerizone-app .az-kicker{font-weight:600!important}
+#aerizone-app .az-btn{font-weight:650!important;min-height:54px}
+#aerizone-app .az-page-hero h1{font-size:clamp(50px,5vw,72px)!important;font-weight:500!important;line-height:1.03!important;letter-spacing:-.052em!important}
+#aerizone-app .az-page-hero p:last-child{font-size:16px}
+#aerizone-app .az-service-philosophy h2{font-size:clamp(42px,4.2vw,60px)!important;font-weight:500!important;line-height:1.08!important}
+#aerizone-app .az-system-content h2{font-size:clamp(38px,3.4vw,52px)!important;font-weight:500!important}
+#aerizone-app .az-system-content h3,
+#aerizone-app .az-system-content strong{font-weight:550!important}
+#aerizone-app .az-integration-map h2{font-size:clamp(42px,4.2vw,60px)!important;font-weight:500!important}
+#aerizone-app .az-consult-intro h2,
+#aerizone-app .az-contact-info h2{font-size:clamp(40px,4vw,56px)!important;font-weight:500!important;line-height:1.08!important}
+#aerizone-app .az-auto-copy h1,
+#aerizone-app .az-feel-title h2,
+#aerizone-app .az-scene-top h2,
+#aerizone-app .az-home-solutions h2,
+#aerizone-app .az-system-intro h2{font-weight:500!important}
+#aerizone-app .az-live-room strong,
+#aerizone-app .az-scene-pane h3,
+#aerizone-app .az-sol-card h3,
+#aerizone-app .az-system-path h3{font-weight:500!important}
+#aerizone-app .az-footer-lead h2,
+#aerizone-app .az-cta-content h2{font-weight:500!important}
+#aerizone-app input,
+#aerizone-app select,
+#aerizone-app textarea{font-size:16px!important}
+
+@media(max-width:900px){
+  #aerizone-app .az-wrap{width:min(100% - 44px,1320px)}
+  #aerizone-app .az-header{height:82px}
+  #aerizone-app .az-header>.az-wrap{width:calc(100% - 36px)}
+  #aerizone-app .az-header-brand .az-brand img{width:168px!important;height:60px!important}
+  #aerizone-app .az-header-status,#aerizone-app .az-header-action{display:none!important}
+  #aerizone-app .az-menu{display:flex!important;margin-left:auto}
+  #aerizone-app .az-nav{position:absolute!important;top:82px!important;left:0!important;right:0!important;width:100%!important;padding:18px 22px!important;border:0!important;border-radius:0!important;background:#071f24!important;display:none!important;flex-direction:column!important;align-items:stretch!important;box-shadow:0 20px 35px rgba(0,0,0,.28)}
+  #aerizone-app.az-menu-open .az-nav{display:flex!important}
+  #aerizone-app .az-nav a{width:100%;padding:15px 17px!important;color:#d7e4e6!important}
+  #aerizone-app .az-nav a.is-active{background:#8ee4eb!important;color:#082126!important}
+  #aerizone-app .az-auto-hero-inner,
+  #aerizone-app .az-feel .az-wrap,
+  #aerizone-app .az-scene-pane,
+  #aerizone-app .az-one-system>.az-wrap,
+  #aerizone-app .az-system-group,
+  #aerizone-app .az-system-group.is-reverse,
+  #aerizone-app .az-integration-map>.az-wrap,
+  #aerizone-app .az-consult>.az-wrap,
+  #aerizone-app .az-contact-grid,
+  #aerizone-app .az-cta{grid-template-columns:1fr!important}
+  #aerizone-app .az-system-group.is-reverse .az-system-visual{order:0}
+  #aerizone-app .az-system-group.is-reverse .az-system-content{order:1}
+  #aerizone-app .az-system-visual{min-height:440px}
+  #aerizone-app .az-system-content{padding:55px 0 80px!important}
+  #aerizone-app .az-integration-map>.az-wrap{gap:55px}
+  #aerizone-app .az-consult>.az-wrap{gap:50px}
+  #aerizone-app .az-contact-info{padding-bottom:45px}
+  #aerizone-app .az-form{padding:45px}
+  #aerizone-app .az-cta-visual{min-height:440px}
+  #aerizone-app .az-footer-grid{grid-template-columns:1.4fr 1fr!important}
+  #aerizone-app .az-footer-connect{grid-column:auto!important}
+}
+
+@media(max-width:600px){
+  #aerizone-app .az-wrap{width:calc(100% - 36px)!important}
+  #aerizone-app .az-header{height:74px}
+  #aerizone-app .az-header>.az-wrap{width:calc(100% - 28px)!important}
+  #aerizone-app .az-header-brand .az-brand img{width:145px!important;height:52px!important}
+  #aerizone-app .az-nav{top:74px!important}
+  #aerizone-app .az-kicker{font-size:8px!important;letter-spacing:.1em!important;line-height:1.5}
+  #aerizone-app .az-page-hero{padding:78px 0 72px!important}
+  #aerizone-app .az-page-hero h1{font-size:42px!important;line-height:1.06!important;letter-spacing:-.045em!important}
+  #aerizone-app .az-page-hero p:last-child{font-size:15px!important;line-height:1.7!important;margin-top:22px!important}
+  #aerizone-app .az-auto-hero{padding:45px 0 60px!important;background-position:58% center!important}
+  #aerizone-app .az-auto-copy{padding:12px 0!important}
+  #aerizone-app .az-auto-copy h1{font-size:43px!important;line-height:1.03!important;letter-spacing:-.045em!important;margin:22px 0!important}
+  #aerizone-app .az-auto-copy>p:not(.az-kicker){font-size:15px!important;line-height:1.7!important}
+  #aerizone-app .az-actions{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:14px!important}
+  #aerizone-app .az-actions .az-btn{width:100%!important;justify-content:space-between}
+  #aerizone-app .az-auto-play{width:100%;justify-content:flex-start}
+  #aerizone-app .az-hero-proof{margin-top:30px!important}
+  #aerizone-app .az-live-panel{margin-top:30px!important;padding:12px!important}
+  #aerizone-app .az-live-head b{display:none}
+  #aerizone-app .az-live-room{padding:20px!important}
+  #aerizone-app .az-live-room strong{font-size:21px!important}
+  #aerizone-app .az-live-room>span{font-size:36px!important}
+  #aerizone-app .az-live-devices{grid-template-columns:1fr 1fr!important}
+  #aerizone-app .az-live-devices button{min-height:72px!important;padding:11px!important}
+  #aerizone-app .az-auto-status .az-wrap{grid-template-columns:1fr 1fr!important;gap:8px!important}
+  #aerizone-app .az-auto-status span{font-size:7px!important;padding:8px 0!important}
+  #aerizone-app .az-feel,
+  #aerizone-app .az-scene-lab,
+  #aerizone-app .az-home-solutions,
+  #aerizone-app .az-service-philosophy,
+  #aerizone-app .az-system-groups,
+  #aerizone-app .az-integration-map,
+  #aerizone-app .az-consult,
+  #aerizone-app .az-contact{padding:78px 0!important}
+  #aerizone-app .az-feel-title h2,
+  #aerizone-app .az-scene-top h2,
+  #aerizone-app .az-home-solutions h2,
+  #aerizone-app .az-service-philosophy h2,
+  #aerizone-app .az-integration-map h2,
+  #aerizone-app .az-consult-intro h2,
+  #aerizone-app .az-contact-info h2{font-size:39px!important;line-height:1.08!important;letter-spacing:-.04em!important}
+  #aerizone-app .az-feel-orbit{width:290px!important;height:290px!important}
+  #aerizone-app .az-feel-orbit:before{inset:39px!important}
+  #aerizone-app .az-feel-orbit:after{inset:82px!important}
+  #aerizone-app .az-orbit-core{inset:105px!important}
+  #aerizone-app .az-scene-tabs{width:100%;overflow-x:auto!important;scrollbar-width:none}
+  #aerizone-app .az-scene-tabs::-webkit-scrollbar{display:none}
+  #aerizone-app .az-scene-tabs button{white-space:nowrap}
+  #aerizone-app .az-scene-stage,
+  #aerizone-app .az-scene-pane{min-height:600px!important}
+  #aerizone-app .az-scene-pane{padding:68px 18px 20px!important;gap:16px!important}
+  #aerizone-app .az-scene-pane>div{padding:20px!important}
+  #aerizone-app .az-scene-pane h3{font-size:32px!important;line-height:1.08!important}
+  #aerizone-app .az-scene-pane p{font-size:14px!important;line-height:1.65!important}
+  #aerizone-app .az-solution-mosaic{display:block!important}
+  #aerizone-app .az-sol-card{min-height:330px!important;margin-bottom:12px!important}
+  #aerizone-app .az-sol-card h3{font-size:24px!important}
+  #aerizone-app .az-system-intro{padding:70px 22px!important}
+  #aerizone-app .az-system-intro h2{font-size:39px!important}
+  #aerizone-app .az-system-path{grid-template-columns:1fr!important}
+  #aerizone-app .az-system-path article{min-height:245px!important;padding:27px 22px!important}
+  #aerizone-app .az-system-path h3{font-size:21px!important}
+  #aerizone-app .az-about-hero{min-height:auto!important}
+  #aerizone-app .az-about-hero-inner{display:block!important;min-height:auto!important;padding:65px 0 110px!important}
+  #aerizone-app .az-about-hero-copy{padding:0!important}
+  #aerizone-app .az-about-hero-copy h1{font-size:41px!important;line-height:1.07!important;letter-spacing:-.043em!important}
+  #aerizone-app .az-about-hero-copy>p:not(.az-kicker){font-size:15px!important;line-height:1.7!important}
+  #aerizone-app .az-about-hero-card{margin:38px 0 0!important;padding:26px!important}
+  #aerizone-app .az-about-hero-card strong{font-size:22px!important}
+  #aerizone-app .az-about-hero-foot .az-wrap{height:55px!important;gap:24px!important}
+  #aerizone-app .az-about-purpose,
+  #aerizone-app .az-about-ecosystem,
+  #aerizone-app .az-about-difference,
+  #aerizone-app .az-about-method,
+  #aerizone-app .az-about-values{padding:78px 0!important}
+  #aerizone-app .az-about-purpose-head,
+  #aerizone-app .az-about-purpose-grid,
+  #aerizone-app .az-about-eco-head,
+  #aerizone-app .az-about-difference>.az-wrap,
+  #aerizone-app .az-about-method-layout,
+  #aerizone-app .az-about-values>.az-wrap{gap:35px!important}
+  #aerizone-app .az-about-purpose-head h2,
+  #aerizone-app .az-about-eco-head h2,
+  #aerizone-app .az-about-diff-copy h2,
+  #aerizone-app .az-about-method-intro h2,
+  #aerizone-app .az-about-values-title h2{font-size:37px!important;line-height:1.1!important;letter-spacing:-.04em!important}
+  #aerizone-app .az-about-purpose-image{min-height:340px!important}
+  #aerizone-app .az-about-purpose-copy{padding:32px 22px!important}
+  #aerizone-app .az-about-purpose-copy h3{font-size:23px!important}
+  #aerizone-app .az-about-eco-grid{grid-template-rows:repeat(4,310px)!important}
+  #aerizone-app .az-about-eco-card h3{font-size:24px!important}
+  #aerizone-app .az-about-blueprint{width:280px!important}
+  #aerizone-app .az-about-method-visual{min-height:340px!important}
+  #aerizone-app .az-about-method-grid article{padding:26px 22px!important;min-height:190px!important}
+  #aerizone-app .az-about-method-grid h3{font-size:19px!important}
+  #aerizone-app .az-about-values-list article{grid-template-columns:36px 1fr!important;gap:14px!important;padding:27px 0!important}
+  #aerizone-app .az-about-values-list h3{font-size:21px!important}
+  #aerizone-app .az-system-visual{min-height:320px!important}
+  #aerizone-app .az-system-content{padding:38px 0 65px!important}
+  #aerizone-app .az-system-content h2{font-size:36px!important;line-height:1.1!important}
+  #aerizone-app .az-system-content>p{font-size:14px!important;line-height:1.7!important}
+  #aerizone-app .az-system-content li{grid-template-columns:1fr!important;gap:6px!important;padding:17px 0!important}
+  #aerizone-app .az-system-content li span{font-size:13px!important}
+  #aerizone-app .az-map{width:290px!important;height:290px!important;margin:auto}
+  #aerizone-app .az-consult-topics{grid-template-columns:1fr!important}
+  #aerizone-app .az-consult-topics span{min-height:68px!important;padding:20px!important}
+  #aerizone-app .az-contact-info>a{padding:22px 0!important}
+  #aerizone-app .az-contact-info>a strong{font-size:18px!important;overflow-wrap:anywhere}
+  #aerizone-app .az-form{padding:28px 20px!important}
+  #aerizone-app .az-form .az-btn{width:100%!important}
+  #aerizone-app .az-visual-band{min-height:340px!important}
+  #aerizone-app .az-cta-visual{min-height:320px!important}
+  #aerizone-app .az-cta-content{padding:58px 22px!important}
+  #aerizone-app .az-cta-content h2{font-size:39px!important;line-height:1.07!important}
+  #aerizone-app .az-cta-content>p:not(.az-kicker){font-size:14px!important}
+  #aerizone-app .az-cta-actions{align-items:stretch!important}
+  #aerizone-app .az-cta-actions .az-btn{width:100%!important}
+  #aerizone-app .az-cta-notes{margin-top:38px!important}
+  #aerizone-app .az-footer-lead{padding:62px 0 48px!important}
+  #aerizone-app .az-footer-lead h2{font-size:38px!important;line-height:1.08!important}
+  #aerizone-app .az-footer-lead>a{width:100%!important}
+  #aerizone-app .az-footer-grid{grid-template-columns:1fr!important;gap:42px!important;padding:52px 0!important}
+  #aerizone-app .az-footer-brand .az-brand img{width:205px!important}
+  #aerizone-app .az-copyright{grid-template-columns:1fr!important;gap:10px!important}
+}
+
+@media(max-width:390px){
+  #aerizone-app .az-wrap{width:calc(100% - 28px)!important}
+  #aerizone-app .az-page-hero h1,
+  #aerizone-app .az-auto-copy h1,
+  #aerizone-app .az-about-hero-copy h1{font-size:37px!important}
+  #aerizone-app .az-feel-title h2,
+  #aerizone-app .az-scene-top h2,
+  #aerizone-app .az-home-solutions h2,
+  #aerizone-app .az-service-philosophy h2,
+  #aerizone-app .az-integration-map h2,
+  #aerizone-app .az-consult-intro h2,
+  #aerizone-app .az-contact-info h2{font-size:35px!important}
+  #aerizone-app .az-live-devices button span{font-size:9px!important}
+}

@@ -1207,3 +1207,160 @@
     padding-top:58px!important;
   }
 }
+
+
+/* Aerizone 4.5.0 — complete About page brand-story audit */
+#aerizone-app .az-about-premium h1,
+#aerizone-app .az-about-premium h2,
+#aerizone-app .az-about-premium h3{
+  text-wrap:balance;
+}
+#aerizone-app .az-about-premium p{
+  text-wrap:pretty;
+}
+#aerizone-app .az-about-purpose-copy>p,
+#aerizone-app .az-about-diff-copy>p,
+#aerizone-app .az-about-method-intro>p,
+#aerizone-app .az-about-values-list p{
+  font-size:15px!important;
+  line-height:1.78!important;
+}
+#aerizone-app .az-about-confidence{
+  background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=88')!important;
+  background-position:center!important;
+}
+#aerizone-app .az-about-difference{
+  padding:118px 0!important;
+  background:linear-gradient(135deg,#f7fafa 0%,#eef5f5 100%)!important;
+}
+#aerizone-app .az-about-difference>.az-wrap{
+  grid-template-columns:.88fr 1.12fr!important;
+  gap:clamp(65px,8vw,120px)!important;
+}
+#aerizone-app .az-about-diff-copy h2{
+  font-weight:500!important;
+  font-size:clamp(44px,4.25vw,62px)!important;
+}
+#aerizone-app .az-about-accountability{
+  border-top:1px solid #b8d0d3!important;
+}
+#aerizone-app .az-about-accountability article{
+  display:grid!important;
+  grid-template-columns:44px 1fr!important;
+  gap:22px!important;
+  padding:29px 0!important;
+  border-bottom:1px solid #b8d0d3!important;
+  transition:padding .3s ease,background .3s ease!important;
+}
+#aerizone-app .az-about-accountability article:hover{
+  padding-left:18px!important;
+  background:rgba(255,255,255,.5)!important;
+}
+#aerizone-app .az-about-accountability b,
+#aerizone-app .az-about-accountability small{
+  font:600 9px 'DM Mono',monospace!important;
+  letter-spacing:.13em!important;
+  color:#1ea0b0!important;
+}
+#aerizone-app .az-about-accountability small{
+  display:block!important;
+  margin:1px 0 10px!important;
+}
+#aerizone-app .az-about-accountability strong{
+  display:block!important;
+  max-width:540px!important;
+  color:#103238!important;
+  font-size:22px!important;
+  font-weight:600!important;
+  line-height:1.32!important;
+}
+#aerizone-app .az-about-accountability p{
+  max-width:580px!important;
+  margin:10px 0 0!important;
+  color:#667d81!important;
+  font-size:14px!important;
+  line-height:1.7!important;
+}
+#aerizone-app .az-about-method{
+  padding:118px 0!important;
+}
+#aerizone-app .az-about-method-intro h2,
+#aerizone-app .az-about-values-title h2{
+  font-weight:500!important;
+}
+#aerizone-app .az-about-method-grid article{
+  min-height:270px!important;
+}
+#aerizone-app .az-about-values{
+  padding:110px 0!important;
+  background:#fbfcfc!important;
+}
+#aerizone-app .az-about-values>.az-wrap{
+  grid-template-columns:.88fr 1.12fr!important;
+  gap:clamp(65px,7vw,105px)!important;
+  align-items:start!important;
+}
+#aerizone-app .az-about-values-title{
+  position:static!important;
+}
+#aerizone-app .az-about-values-title h2{
+  max-width:570px!important;
+  font-size:clamp(40px,3.8vw,54px)!important;
+  line-height:1.08!important;
+}
+#aerizone-app .az-about-values-list article{
+  grid-template-columns:48px 1fr!important;
+  gap:22px!important;
+  padding:27px 0!important;
+}
+#aerizone-app .az-about-values-list span{
+  width:34px!important;
+  height:34px!important;
+  display:grid!important;
+  place-items:center!important;
+  border:1px solid #9fc8cc!important;
+  border-radius:50%!important;
+}
+#aerizone-app .az-about-values-list h3{
+  margin:1px 0 7px!important;
+  font-size:24px!important;
+  font-weight:600!important;
+}
+#aerizone-app .az-about-premium + .az-footer .az-footer-lead{
+  display:none!important;
+}
+#aerizone-app .az-about-premium + .az-footer .az-footer-grid{
+  padding-top:78px!important;
+}
+@media(max-width:900px){
+  #aerizone-app .az-about-difference>.az-wrap,
+  #aerizone-app .az-about-values>.az-wrap{
+    grid-template-columns:1fr!important;
+    gap:55px!important;
+  }
+}
+@media(max-width:600px){
+  #aerizone-app .az-about-purpose,
+  #aerizone-app .az-about-ecosystem,
+  #aerizone-app .az-about-difference,
+  #aerizone-app .az-about-method,
+  #aerizone-app .az-about-values{
+    padding:76px 0!important;
+  }
+  #aerizone-app .az-about-accountability article{
+    grid-template-columns:36px 1fr!important;
+    gap:14px!important;
+    padding:24px 0!important;
+  }
+  #aerizone-app .az-about-accountability article:hover{padding-left:0!important}
+  #aerizone-app .az-about-accountability strong{font-size:19px!important}
+  #aerizone-app .az-about-method-grid article{min-height:235px!important}
+  #aerizone-app .az-about-values-title h2{font-size:38px!important}
+  #aerizone-app .az-about-values-list article{
+    grid-template-columns:40px 1fr!important;
+    gap:14px!important;
+    padding:24px 0!important;
+  }
+  #aerizone-app .az-about-values-list h3{font-size:21px!important}
+  #aerizone-app .az-about-premium + .az-footer .az-footer-grid{padding-top:58px!important}
+}
